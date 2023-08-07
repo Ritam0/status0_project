@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Services from './Services'
 import './Home.css';
 import home_doctor_pic from "./image/home_doctor_pic.jpg"
 
@@ -9,7 +10,8 @@ const Home = () => {
             <Navbar />
 
 
-            <main>
+
+            <main id='home_main'>
 
                 <section id='left_sec'>
                     <section id='home_heading'>
@@ -32,6 +34,8 @@ const Home = () => {
 
             </main>
 
+
+            <Services />
 
         </div>
     )

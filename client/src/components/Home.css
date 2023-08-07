@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-main {
+#home_main {
     /* border: 3px solid blue; */
     height: fit-content;
     display: flex;
@@ -73,6 +73,7 @@ main {
     cursor: pointer;
     font-size: 15px;
     margin: 5px;
+    box-shadow: 0 0 3px 3px rgb(187, 70, 255);
 }
 
 .button:hover::before {
@@ -108,7 +109,7 @@ main {
 
 
 @media only screen and (max-width: 800px) {
-    main {
+    #home_main {
 
         flex-direction: column-reverse;
         margin-top: 70px;

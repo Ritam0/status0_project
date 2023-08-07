@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#services_main {
+    /* border: 3px solid blue; */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+#serv_heading {
+    /* border: 3px solid red; */
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.serv_sub_heading {
+    /* border: 3px solid red; */
+    height: fit-content;
+    padding: 5px;
+    margin: 5px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: orangered;
+
+
+}
+
+#serv_cards {
+    /* border: 3px solid red; */
+    width: 97vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.61);
+    padding: 32px;
+    /* background: linear-gradient(-45deg, #2b2b2b 0%, #7a7a7a 100%); */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #333333;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content .heading {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+}
+
+.content .para {
+    line-height: 1.5;
+}
+
+.content .btn {
+    color: #b31616;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #ffc176 0%, #e281fa 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(-45deg, #ffc176 0%, #e281fa 100%);
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover::before {
+
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: none;
+}
+
+.card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+}
+
+.content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #b31616;
+}
+
+.content .btn:active {
+    box-shadow: none;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #serv_heading {
+        font-size: 30px;
+    }
+
+    .serv_sub_heading {
+        font-size: 25px;
+
+    }
+
+    .card {
+        padding: 20px;
+        width: 88vw;
+        height: 300px;
+
+    }
+
+    .content .heading {
+        font-size: 25px;
+    }
+}
