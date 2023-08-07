@@ -1,6 +1,8 @@
+import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import "./Services.css";
 import home_doctor_pic from "./image/home_doctor_pic.jpg";
+import DoctorsList from './doctors';
 
 const Services = () => {
     return (
@@ -35,7 +37,7 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button class="btn">Read more</button>
+                            <button class="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink> </button>
                         </div>
                     </div>
 
