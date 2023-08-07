@@ -1,0 +1,200 @@
+.About_bg{
+    background-image: url('https://images.pexels.com/photos/4167542/pexels-photo-4167542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+  
+}
+.ritam,
+.bibhab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.name_con{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.github, .linkdin ,.email{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.github {
+  color: rgb(255, 255, 255);
+}
+.linkdin{
+  color: white;
+}
+.email{
+  color: rgb(255, 255, 255);
+}
+.link_con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ritam img,
+.bibhab img{
+  width: 150px;
+  height: 100%;
+  border-radius: 50%;
+}
+.bot_about{
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.715);
+  color: white;
+  margin-top: 100px;
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whole_about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(10, 255, 243, 0.47);
+  width: 900px;
+  height: 100%;
+  margin-left: 20%;
+  margin-top: 50px;
+  border-radius: 5%;
+}
+.about_card_details {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+} */
+
+/* .active {
+  display: block;
+  animation: slide-down 0.3s ease-in-out;
+} */
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .About_bg{
+   
+    height: 100%;
+  
+}
+.whole_about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(206, 210, 214, 0.767);
+  width: 300px;
+  height: auto;
+  margin-left: 20%;
+  margin-top: 50px;
+  border-radius: 5%;
+  padding: 10px;
+}
+.ritam,
+.bibhab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.name_con{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.github, .linkdin ,.email{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.github {
+  color: rgb(255, 255, 255);
+}
+.linkdin{
+  color: rgb(0, 170, 255);
+}
+.email{
+  color: rgb(255, 255, 255);
+}
+.link_con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.ritam img,
+.bibhab img{
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+}
+.bot_about{
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.715);
+  color: white;
+  margin-top: 100px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.whole_about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(10, 255, 243, 0.47);
+  width: 300px;
+  height: 100%;
+  margin-left: 20%;
+  margin-top: 50px;
+  border-radius: 5%;
+}
+
+}
