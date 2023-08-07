@@ -4,6 +4,7 @@ import "./About.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import Footer from './Footer'
+import home_doctor_pic from "./image/home_doctor_pic.jpg"
 
 const AboutUsPage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -39,31 +40,33 @@ const AboutUsPage = () => {
     <>
       <div className='About_bg'>
         <Navbar />
-        <div className="whole_about">
-          <div className="about_card_details">
-            <ul>
-              <li>Welcome to our website! We are a passionate team dedicated to providing high-quality fitness services and promoting a healthy lifestyle.</li>
-              <li>Our mission is to help individuals achieve their fitness goals and improve their overall well-being. We offer a wide range of fitness programs, including gym workouts, yoga classes, personal training, and more.</li>
-              <li>With our experienced trainers and state-of-the-art facilities, we strive to create a supportive and motivating environment for our clients. Whether you're a beginner or an advanced fitness enthusiast, we have something for everyone.</li>
-              <li>Join us today and embark on a journey towards a healthier and happier you. We are here to guide and support you every step of the way.</li>
-              <li>Feel free to explore our website and learn more about the services we offer. If you have any questions or need assistance, don't hesitate to reach out to our friendly team.</li>
-              <li>Thank you for choosing us as your fitness partner!</li>
-            </ul>
-          </div>
+
+        <main id='about_main'>
+
+          <section id='about_heading'>
+            ABOUT <span>US</span>
+          </section>
+          <section id='about_middle'>
+
+            <section id='about_left_sec'>
+              <img src={home_doctor_pic} alt="" />
+
+            </section>
+            <section id='about_right_sec'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti alias voluptates reprehenderit inventore temporibus modi aliquid atque labore odio distinctio exercitationem itaque id, quaerat quod accusantium nulla aperiam esse sunt velit mollitia, voluptate cumque ducimus nobis! Ullam reprehenderit voluptatum voluptates unde, aspernatur veniam doloremque modi debitis suscipit, repellat sed autem.
+
+            </section>
+          </section>
+          <section id='about_faq_sec'>
+            FA<span>Q</span>
+
+          </section>
 
 
 
-          <h2>Frequently Asked Questions</h2>
-          {faqData.map((faq, index) => (
-            <div key={index}>
-              <h3 onClick={() => handleQuestionClick(index)}>{faq.question}</h3>
-              {activeIndex === index && <p>{faq.answer}</p>}
-            </div>
-          ))}
-        </div>
 
 
-
+        </main>
 
 
         <Footer />

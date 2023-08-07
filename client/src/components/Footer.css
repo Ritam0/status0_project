@@ -4,6 +4,9 @@
     min-height: 350px;
     height: fit-content;
     box-shadow: 0 0 10px 2px black;
+    /* position: absolute; */
+    /* width: 100vw; */
+    /* bottom: 0; */
 }
 
 #footer_heading {

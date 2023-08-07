@@ -17,39 +17,39 @@ const Services = () => {
                 </section>
                 <section id='serv_cards'>
 
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Ambulance Service</p>
-                            <p class="para">
+                    <div className="card">
+                        <div className="content">
+                            <p className="heading">Ambulance Service</p>
+                            <p className="para">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button class="btn">Read more</button>
+                            <button className="btn">Read more</button>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Doctors</p>
-                            <p class="para">
+                    <div className="card">
+                        <div className="content">
+                            <p className="heading">Doctors</p>
+                            <p className="para">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button class="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink> </button>
+                            <button className="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink> </button>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Medicine Shops</p>
-                            <p class="para">
+                    <div className="card">
+                        <div className="content">
+                            <p className="heading">Medicine Shops</p>
+                            <p className="para">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button class="btn">Read more</button>
+                            <button className="btn">Read more</button>
                         </div>
                     </div>
                     

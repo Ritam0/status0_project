@@ -21,8 +21,8 @@ const Home = () => {
                     </section>
                     <section id='home_left_btn'>
                         <a href="#services_main">
-                            <button class="button">
-                                <span class="button-content" >Our Services</span>
+                            <button className="button">
+                                <span className="button-content" >Our Services</span>
                             </button>
                         </a>
 
