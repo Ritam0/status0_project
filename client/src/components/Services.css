@@ -139,7 +139,8 @@
 
 @media only screen and (max-width: 800px) {
     #services_main{
-        padding: 50px 10px;
+        padding: 100px 10px;
+        
     }
     #serv_heading {
         font-size: 30px;
