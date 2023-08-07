@@ -29,7 +29,7 @@ const Services = () => {
 
                     <div class="card">
                         <div class="content">
-                            <p class="heading">Hospitality</p>
+                            <p class="heading">Doctors</p>
                             <p class="para">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
@@ -38,28 +38,7 @@ const Services = () => {
                             <button class="btn">Read more</button>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Blood Bank</p>
-                            <p class="para">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                                laboriosam at voluptas minus culpa deserunt delectus sapiente
-                                inventore pariatur
-                            </p>
-                            <button class="btn">Read more</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Oxygen Leads</p>
-                            <p class="para">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                                laboriosam at voluptas minus culpa deserunt delectus sapiente
-                                inventore pariatur
-                            </p>
-                            <button class="btn">Read more</button>
-                        </div>
-                    </div>
+
                     <div class="card">
                         <div class="content">
                             <p class="heading">Medicine Shops</p>
@@ -71,17 +50,7 @@ const Services = () => {
                             <button class="btn">Read more</button>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="content">
-                            <p class="heading">Disease Information</p>
-                            <p class="para">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                                laboriosam at voluptas minus culpa deserunt delectus sapiente
-                                inventore pariatur
-                            </p>
-                            <button class="btn">Read more</button>
-                        </div>
-                    </div>
+                    
 
 
 

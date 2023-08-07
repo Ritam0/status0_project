@@ -3,8 +3,8 @@ import Navbar from "./Navbar";
 import "./About.css";
 import { FaGithub,FaLinkedin } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
-import bibhab from "./image/bibhab.jpeg"
-import ritam from "./image/ritam.jpeg"
+import bibhab from "./image/bibhab.png"
+import ritam from "./image/ritam.png"
 const AboutUsPage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 

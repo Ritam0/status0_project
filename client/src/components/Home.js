@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Services from './Services'
+import Footer from './Footer'
 import './Home.css';
 import home_doctor_pic from "./image/home_doctor_pic.jpg"
 
@@ -8,9 +9,7 @@ const Home = () => {
     return (
         <div>
             <Navbar />
-
-
-
+           
             <main id='home_main'>
 
                 <section id='left_sec'>
@@ -21,9 +20,12 @@ const Home = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus, rem magni omnis ex ab,
                     </section>
                     <section id='home_left_btn'>
-                        <button class="button">
-                            <span class="button-content">Our Services</span>
-                        </button>
+                        <a href="#services_main">
+                            <button class="button">
+                                <span class="button-content" >Our Services</span>
+                            </button>
+                        </a>
+
                     </section>
 
                 </section>
@@ -36,6 +38,7 @@ const Home = () => {
 
 
             <Services />
+            <Footer />
 
         </div>
     )
