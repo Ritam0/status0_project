@@ -1,6 +1,6 @@
 .About_bg{
     background-image: url('https://images.pexels.com/photos/4167542/pexels-photo-4167542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -198,3 +198,8 @@ h3 {
 }
 
 }
+
+
+
+
+@media only screen and (max-width: 800px) {}
