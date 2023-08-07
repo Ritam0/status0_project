@@ -14,7 +14,7 @@ const Home = () => {
           hi
         </section>
         <section id='right_sec'>
-          hi
+          <img src="client\src\components\img\home_doctor_pic.jpg" alt="pic" />
         </section>
       </main>
 

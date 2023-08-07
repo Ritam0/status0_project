@@ -1,7 +1,6 @@
 main {
     border: 3px solid blue;
-    /* height: fit-content; */
-    height: 150vh;
+    height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -13,10 +12,14 @@ main {
     border: 3px solid red;
     height: fit-content;
     width: 45vw;
+    height: 80vh;
+    margin: 5px;
 }
 
 #right_sec {
     border: 3px solid red;
     height: fit-content;
     width: 45vw;
+    height: 80vh;
+    margin: 5px;
 }
