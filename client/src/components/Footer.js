@@ -22,7 +22,7 @@ const Footer = () => {
                             Ritam Majumder
                         </section>
                         <section className='ourdsc'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ipsum aut ratione iste facere eos architecto, voluptatem eveniet consequatur dolorem.
+                            Lorem ipsum dolor sit, 
                         </section>
                         <section className='ourimgs'>
                             <img src={ritam} alt="pic" />
@@ -61,7 +61,7 @@ const Footer = () => {
                             Bibhab  Mukhopadhyay
                         </section>
                         <section className='ourdsc'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ipsum aut ratione iste facere eos architecto, voluptatem eveniet consequatur dolorem.
+                            Lorem ipsum dolor sit, 
                         </section>
                         <section className='ourimgs'>
                             <img src={bibhab} alt="pic" />
@@ -101,7 +101,7 @@ const Footer = () => {
                             Soumojit Shome
                         </section>
                         <section className='ourdsc'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ipsum aut ratione iste facere eos architecto, voluptatem eveniet consequatur dolorem.
+                            Lorem ipsum dolor sit, 
                         </section>
                         <section className='ourimgs'>
                             <img src={soumojitshome} alt="pic" />
