@@ -37,7 +37,7 @@ const AboutUsPage = () => {
                   <div className="faqs_heading" >
                     Q: How can I find doctors near me?
                   </div>
-                  <div className="faqs_desc" style={{ height: openIndex === 0 ? '180px' : '0' }}>
+                  <div className="faqs_desc" style={{ height: openIndex === 0 ? '250px' : '0' }}>
                     A:To find doctors near you, simply enter your location or zip code in the search bar on our website. We will then display a list of qualified doctors and healthcare professionals in your area, along with their specialties and contact information
                   </div>
                 </section>
@@ -46,7 +46,7 @@ const AboutUsPage = () => {
                   <div className="faqs_heading" >
                     Q: What types of doctors can I find on your website?
                   </div>
-                  <div className="faqs_desc" style={{ height: openIndex === 1 ? '180px' : '0' }}>
+                  <div className="faqs_desc" style={{ height: openIndex === 1 ? '250px' : '0' }}>
                     A: Our website lists a wide range of healthcare professionals, including general practitioners, specialists (e.g., cardiologists, dermatologists, pediatricians), dentists, psychiatrists, and more. You can filter the search results based on your specific needs and preferences
                   </div>
                 </section>
@@ -55,7 +55,7 @@ const AboutUsPage = () => {
                   <div className="faqs_heading" >
                     Q: How do I book an appointment with a doctor I find on your website?
                   </div>
-                  <div className="faqs_desc" style={{ height: openIndex === 2 ? '180px' : '0' }}>
+                  <div className="faqs_desc" style={{ height: openIndex === 2 ? '250px' : '0' }}>
                     Booking an appointment is easy. Once you have selected a doctor from the list, click on their profile to view their availability. You can then choose a suitable date and time and follow the booking instructions provided. Some doctors may offer online booking, while others may require you to call their office directly.
                   </div>
                 </section>
@@ -64,7 +64,7 @@ const AboutUsPage = () => {
                   <div className="faqs_heading" >
                     Q: Are the doctors on your website verified and licensed?
                   </div>
-                  <div className="faqs_desc" style={{ height: openIndex === 3 ? '180px' : '0' }}>
+                  <div className="faqs_desc" style={{ height: openIndex === 3 ? '250px' : '0' }}>
                     A: Yes, we take the verification and licensing of doctors seriously. All the healthcare professionals listed on our website are required to provide valid credentials and proof of licensure before being included in our database. We regularly update and verify their information to ensure accuracy and compliance with relevant regulations.
                   </div>
                 </section>
@@ -72,7 +72,7 @@ const AboutUsPage = () => {
                   <div className="faqs_heading" >
                     Q: Can I read reviews and ratings for the doctors on your website?
                   </div>
-                  <div className="faqs_desc" style={{ height: openIndex === 4 ? '180px' : '0' }}>
+                  <div className="faqs_desc" style={{ height: openIndex === 4 ? '250px' : '0' }}>
                     Yes, we encourage patients to leave reviews and ratings based on their experiences with the doctors. You can find these reviews on each doctors profile. Reading patient reviews can provide valuable insights into the doctors expertise, bedside manner, and overall patient satisfaction.
                   </div>
                 </section>
