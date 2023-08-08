@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import './doctors.css';
 
 const doctorsData = [
-  { id: 1, name: 'Dr. John Doe', specialization: 'Cardiologist' },
-  { id: 2, name: 'Dr. Jane Smith', specialization: 'Dermatologist' },
-  { id: 3, name: 'Dr. Michael Johnson', specialization: 'Pediatrician' },
+  { id: 1, name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist',Experience:'20+ years',Location:'Mukundapur AMRI Hospital',Fees:'500',},
+  { id: 2, name: 'Dr. Soumyakanti Dutta', specialization: 'Cardiologist',Experience:'15+ years',Location:'Chandannagar Hospital',Fees:'1200' },
+  { id: 3, name: 'Dr. Sumanta Chatterjee', specialization: 'Dermatologist',Experience:'14+ years',Location:'beleghata ID Hospital',Fees:'700' },
+  { id: 4, name: 'Dr. Soumyabrata acharya', specialization: 'Pediatrician' ,Experience:'10+ years',Location:'SSKM Hospital',Fees:'800'},
+  { id: 5, name: 'Dr. Dipanwita Roy', specialization: 'Pediatrician', Experience:'5+ years',Location:'KOLkata Medical College & Hospital',Fees:'1000'},
   // Add more doctor data here
 ];
 
@@ -16,6 +18,10 @@ const DoctorsList = () => {
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleBookNow = (doctorName) => {
+    alert(`Booking appointment with Dr. ${doctorName}`);
   };
 
   const handleSpecializationChange = (event) => {
@@ -59,8 +65,16 @@ const DoctorsList = () => {
       <ul className="doctors-list">
         {filteredDoctors.map((doctor) => (
           <li key={doctor.id} className="doctor-item">
-            <h3>{doctor.name}</h3>
-            <p>Specialization: {doctor.specialization}</p>
+            <div className="details">
+              <h3>{doctor.name}</h3>
+              <p>Specialization: {doctor.specialization}</p>
+              <p>Experience: {doctor.Experience}</p>
+              <p>Location: {doctor.Location}</p>
+              <p>Fees: {doctor.Fees}</p>
+            </div>
+            <div className="actions">
+              <button onClick={() => handleBookNow(doctor.name)}>Book Now</button>
+            </div>
           </li>
         ))}
       </ul>

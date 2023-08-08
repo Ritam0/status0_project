@@ -128,6 +128,21 @@
       margin-right: 0;
       margin-bottom: 10px;
     }
+    .doctor-item {
+        flex-direction: column;
+      }
+    
+      .doctor-item .details,
+      .doctor-item .actions {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+      }
+    
+      .doctor-item .actions button {
+        margin-top: 10px;
+        margin-left: 0;
+      }
   }
   
   
