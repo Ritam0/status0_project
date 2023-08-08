@@ -72,7 +72,7 @@ const DoctorsList = () => {
           value={feedback}
           onChange={handleFeedbackChange}
         />
-        <button onClick={() => setFeedback('')}>Submit Feedback</button>
+        <button id='doctors_submit_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
       </div>
     </div>
     </>
