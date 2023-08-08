@@ -1,0 +1,78 @@
+/* medical-stores.css */
+.medical-stores-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 100px;
+}
+
+.medical-stores-list-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* ... (the rest of the styles) */
+
+
+.medical-stores-list-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Rest of the styles remain the same */
+
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-filter-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-filter-container select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.stores-list {
+  list-style: none;
+  padding: 0;
+}
+
+.store-item {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.store-item:hover {
+  transform: scale(1.05);
+}
+
+.store-item h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.store-item p {
+  margin: 5px 0 0 0;
+  color: var(--text-color);
+}

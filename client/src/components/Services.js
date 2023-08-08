@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import "./Services.css";
 import home_doctor_pic from "./image/home_doctor_pic.jpg";
 import DoctorsList from './doctors';
+import AmbulencePage from './ambulance';
+import MedicalShopPage from './Medical_store';
+
+
 
 const Services = () => {
     return (
@@ -25,7 +29,7 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn">Read more</button>
+                            <button className="btn"><NavLink className="nav-link" to="/ambulance">Read More</NavLink></button>
                         </div>
                     </div>
 
@@ -37,7 +41,7 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink> </button>
+                            <button className="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink></button>
                         </div>
                     </div>
 
@@ -49,7 +53,7 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn">Read more</button>
+                            <button className="btn"><NavLink className="nav-link" to="/Medical_store">Read More</NavLink></button>
                         </div>
                     </div>
                     

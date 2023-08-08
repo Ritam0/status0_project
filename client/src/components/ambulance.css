@@ -1,0 +1,65 @@
+/* ambulance-services.css */
+.ambulance-services-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 100px;
+}
+
+.ambulance-services-list-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-filter-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-filter-container select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-item {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.service-item p {
+  margin: 5px 0 0 0;
+  color: var(--text-color);
+}
