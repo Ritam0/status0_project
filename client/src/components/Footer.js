@@ -21,9 +21,9 @@ const Footer = () => {
                         <section className='ournames'>
                             Ritam Majumder
                         </section>
-                        <section className='ourdsc'>
+                        {/* <section className='ourdsc'>
                             Lorem ipsum dolor sit, 
-                        </section>
+                        </section> */}
                         <section className='ourimgs'>
                             <img src={ritam} alt="pic" />
                         </section>
@@ -60,9 +60,9 @@ const Footer = () => {
                         <section className='ournames'>
                             Bibhab  Mukhopadhyay
                         </section>
-                        <section className='ourdsc'>
+                        {/* <section className='ourdsc'>
                             Lorem ipsum dolor sit, 
-                        </section>
+                        </section> */}
                         <section className='ourimgs'>
                             <img src={bibhab} alt="pic" />
                         </section>
@@ -100,9 +100,9 @@ const Footer = () => {
                         <section className='ournames'>
                             Soumojit Shome
                         </section>
-                        <section className='ourdsc'>
+                        {/* <section className='ourdsc'>
                             Lorem ipsum dolor sit, 
-                        </section>
+                        </section> */}
                         <section className='ourimgs'>
                             <img src={soumojitshome} alt="pic" />
                         </section>
