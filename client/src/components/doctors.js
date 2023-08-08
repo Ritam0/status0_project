@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import React, { useState } from 'react';
+import Modal from 'react-modal'; 
 import './doctors.css';
 
 const doctorsData = [
@@ -15,6 +16,16 @@ const DoctorsList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialization, setSelectedSpecialization] = useState('');
   const [feedback, setFeedback] = useState('');
+
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
+
+  const handleOpenModal = (doctor) => {
+    setSelectedDoctor(doctor);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedDoctor(null);
+  };
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -63,21 +74,31 @@ const DoctorsList = () => {
         </select>
       </div>
       <ul className="doctors-list">
-        {filteredDoctors.map((doctor) => (
+      {filteredDoctors.map((doctor) => (
           <li key={doctor.id} className="doctor-item">
-            <div className="details">
-              <h3>{doctor.name}</h3>
-              <p>Specialization: {doctor.specialization}</p>
-              <p>Experience: {doctor.Experience}</p>
-              <p>Location: {doctor.Location}</p>
-              <p>Fees: {doctor.Fees}</p>
-            </div>
-            <div className="actions">
-              <button onClick={() => handleBookNow(doctor.name)}>Book Now</button>
-            </div>
+            <h3>{doctor.name}</h3>
+            {/* ... (other details) */}
+            <button onClick={() => handleOpenModal(doctor)}>View Details</button>
           </li>
         ))}
       </ul>
+      {selectedDoctor && (
+        <Modal
+          isOpen={true}
+          onRequestClose={handleCloseModal}
+          contentLabel="Doctor Details"
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          <h2>Doctor Details</h2>
+          <p>Name: {selectedDoctor.name}</p>
+          <p>Specialization: {selectedDoctor.specialization}</p>
+          <p>Experience: {selectedDoctor.Experience}</p>
+          <p>Location: {selectedDoctor.Location}</p>
+          <p>Fees: {selectedDoctor.Fees}</p>
+          <button onClick={handleCloseModal}>Close</button>
+        </Modal>
+      )}
       <div className="feedback-form">
         <h2>Leave Feedback</h2>
         <textarea
