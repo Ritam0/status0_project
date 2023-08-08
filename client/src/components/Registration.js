@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './RegistrationForm.css';
+import Navbar from './Navbar'
+import './Registration.css';
 
 function RegistrationForm({ type }) {
   const [name, setName] = useState('');
@@ -18,6 +19,8 @@ function RegistrationForm({ type }) {
   };
 
   return (
+    <>
+    < Navbar />
     <div className="registration-form-container">
       <h1>Register {type}</h1>
       <form onSubmit={handleSubmit}>
@@ -35,6 +38,7 @@ function RegistrationForm({ type }) {
         <button type="submit">Register</button>
       </form>
     </div>
+    </>
   );
 }
 
