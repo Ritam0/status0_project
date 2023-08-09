@@ -55,6 +55,7 @@ const AmbulanceServicesList = () => {
             <h3>{service.name}</h3>
             <p>Location: {service.location}</p>
             <p>Status: {service.available ? 'Available' : 'Unavailable'}</p>
+            <button className='doctors_btn'>Book Now</button>
           </li>
         ))}
       </ul>

@@ -97,6 +97,7 @@ const DoctorsList = () => {
             <p><b>Location:</b> {selectedDoctor.Location}</p>
             <p><b>Fees:</b> {selectedDoctor.Fees}</p>
             <button className='doctors_btn' onClick={handleCloseModal}>Close</button>
+            <button className='doctors_btn'>Book Now</button>
           </Modal>
         )}
         <div className="feedback-form">

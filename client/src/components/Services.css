@@ -59,7 +59,8 @@
     justify-content: center;
     width: 320px;
     height: 350px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.61);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.61); */
+    box-shadow: 0 10px 20px rgb(255, 123, 0);
     padding: 32px;
     /* background: linear-gradient(-45deg, #2b2b2b 0%, #7a7a7a 100%); */
     overflow: hidden;

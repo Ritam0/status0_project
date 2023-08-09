@@ -55,6 +55,7 @@ const MedicalStoresList = () => {
             <h3>{store.name}</h3>
             <p>Location: {store.location}</p>
             <p>Status: {store.isOpen ? 'Open' : 'Closed'}</p>
+            <button className='doctors_btn'>Order</button>
           </li>
         ))}
       </ul>
