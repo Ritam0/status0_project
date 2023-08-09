@@ -6,7 +6,7 @@ import log_reg_page_pic from "./image/log_reg_page_pic.jpg";
 
 function RegistrationForm({ type }) {
   const [name, setName] = useState('');
-  const [contact, setContact] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [image, setImage] = useState('');
 
@@ -15,7 +15,7 @@ function RegistrationForm({ type }) {
   
     const formData = new FormData();
     formData.append('name', name);
-    formData.append('email', contact); // Use 'email' instead of 'contact'
+    formData.append('email', email); // Use 'email' instead of 'contact'
     formData.append('password', password);
     formData.append('avatar', image);
     console.log(formData);
@@ -25,7 +25,7 @@ function RegistrationForm({ type }) {
       console.log('Registration successful:', response.data);
   
       setName('');
-      setContact('');
+      setEmail('');
       setPassword('');
       setImage('');
 
@@ -51,7 +51,7 @@ function RegistrationForm({ type }) {
                 <span className="reg_input-border reg_input-border-alt"></span>
               </div>
               <div className="form-control">
-                <input className="reg_input reg_input-alt" placeholder="Email ID" type='email' value={contact} onChange={(e) => setContact(e.target.value)} required />
+                <input className="reg_input reg_input-alt" placeholder="Email ID" type='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <span className="reg_input-border reg_input-border-alt"></span>
               </div>
               <div className="form-control">
