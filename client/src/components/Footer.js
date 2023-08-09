@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css';
 import ritam from "./image/ritam.png"
-import bibhab from "./image/bibhab.png"
+import bibhab from "./image/bibhab.jpg"
 import soumojitshome from "./image/soumojit_pic.png"
 
 

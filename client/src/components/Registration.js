@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar'
 import './Registration.css';
-import home_doctor_pic from "./image/home_doctor_pic.jpg"
+import log_reg_page_pic from "./image/log_reg_page_pic.jpg"
 
 function RegistrationForm({ type }) {
   const [name, setName] = useState('');
@@ -28,13 +28,13 @@ function RegistrationForm({ type }) {
       <main id='reg_main'>
 
         <section id='reg_left_sec'>
-          <img src={home_doctor_pic} alt="pic" />
+          <img src={log_reg_page_pic} alt="pic" />
         </section>
 
 
         <section id='reg_right_sec'>
           <div className="registration-form-container">
-            <h1>Register {type}</h1>
+            <h1>Login/Register {type}</h1>
             <form onSubmit={handleSubmit}>
 
               {/* <label>Name</label>
