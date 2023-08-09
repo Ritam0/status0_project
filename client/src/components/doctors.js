@@ -78,7 +78,7 @@ const DoctorsList = () => {
           <li key={doctor.id} className="doctor-item">
             <h3>{doctor.name}</h3>
             {/* ... (other details) */}
-            <button onClick={() => handleOpenModal(doctor)}>View Details</button>
+            <button className='doctors_btn' onClick={() => handleOpenModal(doctor)}>View Details</button>
           </li>
         ))}
       </ul>
@@ -107,7 +107,7 @@ const DoctorsList = () => {
           value={feedback}
           onChange={handleFeedbackChange}
         />
-        <button id='doctors_submit_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
+        <button className='doctors_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
       </div>
     </div>
     </>
