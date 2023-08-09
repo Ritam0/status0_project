@@ -7,7 +7,7 @@ import { customer_register } from "../controller/customer.controller.js";
 import { feedback_take } from "../controller/feedback.controller.js";
 const userRoutes=Router();
 
-userRoutes.post('/register',upload.single("avatar"),register);
+userRoutes.post('/register', upload.single("avatar"), register);
 userRoutes.post('/customer/registration', customer_register);
 userRoutes.post('/feedback', feedback_take);
 userRoutes.post('/login',login);
