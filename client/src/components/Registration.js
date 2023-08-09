@@ -20,24 +20,49 @@ function RegistrationForm({ type }) {
 
   return (
     <>
-    < Navbar />
-    <div className="registration-form-container">
-      <h1>Register {type}</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+      < Navbar />
+      <div className="registration-form-container">
+        <h1>Register {type}</h1>
+        <form onSubmit={handleSubmit}>
 
-        <label>Contact No</label>
-        <input type="tel" value={contact} onChange={(e) => setContact(e.target.value)} required />
+          {/* <label>Name</label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required /> */}
 
-        <label>Image URL</label>
-        <input type="text" value={image} onChange={(e) => setImage(e.target.value)} required />
+          <div class="form-control">
+            <input class="reg_input reg_input-alt" placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} required  />
+              <span class="reg_input-border reg_input-border-alt"></span>
+          </div>
 
-        {/* Add more form fields here */}
-        
-        <button type="submit">Register</button>
-      </form>
-    </div>
+
+          {/* <label>Contact No</label>
+          <input type="tel" value={contact} onChange={(e) => setContact(e.target.value)} required />*/}
+          
+          <div class="form-control">
+            <input class="reg_input reg_input-alt" placeholder="Contact No" type='text' value={contact} onChange={(e) => setContact(e.target.value)} required  />
+              <span class="reg_input-border reg_input-border-alt"></span>
+          </div>
+
+
+          {/* <label>Image URL</label>
+          <input type="text" value={image} onChange={(e) => setImage(e.target.value)} required />  */}
+
+          <div class="form-control">
+            <input class="reg_input reg_input-alt" placeholder="Image URL" type="text" value={image} onChange={(e) => setImage(e.target.value)} required />
+              <span class="reg_input-border reg_input-border-alt"></span>
+          </div>
+
+
+
+
+
+          {/* Add more form fields here */}
+
+          {/* <button type="submit">Register</button> */}
+          <button className="button" type="submit">
+            <span className="button-content" >Register</span>
+          </button>
+        </form>
+      </div>
     </>
   );
 }
