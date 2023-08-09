@@ -29,7 +29,9 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn"><NavLink className="nav-link" to="/ambulance">Read More</NavLink></button>
+                            <NavLink className="nav-link" to="/ambulance">
+                                <button className="btn">Read More</button>
+                            </NavLink>
                         </div>
                     </div>
 
@@ -41,7 +43,9 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn"><NavLink className="nav-link" to="/doctors">Read More</NavLink></button>
+                            <NavLink className="nav-link" to="/doctors">
+                                <button className="btn">Read More</button>
+                            </NavLink>
                         </div>
                     </div>
 
@@ -53,10 +57,12 @@ const Services = () => {
                                 laboriosam at voluptas minus culpa deserunt delectus sapiente
                                 inventore pariatur
                             </p>
-                            <button className="btn"><NavLink className="nav-link" to="/Medical_store">Read More</NavLink></button>
+                            <NavLink className="nav-link" to="/Medical_store">
+                                <button className="btn">Read More</button>
+                            </NavLink>
                         </div>
                     </div>
-                    
+
 
 
 

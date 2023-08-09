@@ -1,29 +1,21 @@
 /* medical-stores.css */
 .medical-stores-list-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 5px 2px rgb(255, 151, 103);
   border-radius: 8px;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.9);
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .medical-stores-list-container h1 {
   margin-bottom: 20px;
   text-align: center;
-  color: var(--primary-color);
+  color: rgb(0, 0, 0);
 }
 
-/* ... (the rest of the styles) */
-
-
-.medical-stores-list-container h1 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--primary-color);
-}
 
 /* Rest of the styles remain the same */
 
@@ -38,14 +30,15 @@
 .search-filter-container input[type="text"] {
   flex: 1;
   padding: 10px;
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: 4px;
   margin-right: 10px;
+  border: none;
 }
 
 .search-filter-container select {
   padding: 10px;
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: 4px;
 }
 
@@ -57,11 +50,12 @@
 .store-item {
   margin: 15px 0;
   padding: 10px;
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: 4px;
   background-color: #fff;
   transition: transform 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 6px 1px rgb(140, 0, 255);
 }
 .store-item:hover {
   transform: scale(1.05);
@@ -69,10 +63,10 @@
 
 .store-item h3 {
   margin: 0;
-  color: var(--primary-color);
+  color: black;
 }
 
 .store-item p {
   margin: 5px 0 0 0;
-  color: var(--text-color);
+  color: black;
 }

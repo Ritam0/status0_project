@@ -1,7 +1,7 @@
 #Footer {
     /* border: 3px solid red; */
     background-color: rgb(255, 255, 255);
-    min-height: 350px;
+    min-height: 300px;
     height: fit-content;
     box-shadow: 0 0 10px 2px black;
     /* position: absolute; */
@@ -14,7 +14,7 @@
     /* text-align: center; */
     font-size: 40px;
     font-weight: bold;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 #footer_heading span {
@@ -32,8 +32,8 @@
 .contactbxs {
     /* border: 3px solid blue; */
     border-radius: 30px;
-    padding: 10px;
-    margin: 10px;
+    padding: 0 10px;
+    margin: 0 10px;
     width: 30vw;
     height: fit-content;
     /* box-shadow: 0 0 10px 2px black; */
@@ -96,7 +96,7 @@
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
     transition: transform 0.5s;
-    margin: 10px;
+    margin: 5px 10px;
 }
 
 .btn:hover {

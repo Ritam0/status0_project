@@ -1,61 +1,51 @@
-/* Classic Color Palette */
-:root {
-  --primary-color: #007bff;
-  /* Classic Blue */
-  --secondary-color: #ff6c00;
-  /* Classic Orange */
-  --background-color: #f9f9f9;
-  /* Off-White Background */
-  --text-color: #333;
-  /* Dark Text Color */
-  --border-color: #ccc;
-  /* Light Gray Border Color */
-}
-
 .search-filter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  /* border: 3px solid red; */
 }
 
-.search-filter-container input[type="text"] {
-  flex: 1;
+.doctors_find_input {
+  /* flex: 1; */
   padding: 10px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  margin-right: 10px;
+  margin: 10px;
+  /* color: red; */
+  border: none;
+  box-shadow: 0 0 5px 2px rgb(255, 151, 103);
+}
+
+.doctors_find_input:focus {
+  box-shadow: 0 0 5px 2px rgb(255, 166, 0);
+  border: none;
+
+
 }
 
 .search-filter-container select {
+  /* border: 1px solid red; */
   padding: 10px;
-  border: 1px solid var(--border-color);
   border-radius: 4px;
+  box-shadow: 0 0 5px 2px rgb(255, 166, 0);
 }
 
 .doctors-list-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
-  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: var(--background-color);
-  margin-top: 100px;
+  background-color: #f9f9f9;
+  /* margin-top: 100px; */
+  /* border: 3px solid red; */
+  box-shadow: 0 0 8px 1px rgb(255, 60, 0);
 }
 
 .doctors-list-container h1 {
   margin-bottom: 20px;
   text-align: center;
-  color: var(--primary-color);
+  color: black;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
 
 .doctors-list {
   list-style: none;
@@ -65,8 +55,8 @@ input[type="text"] {
 .doctor-item {
   margin: 15px 0;
   padding: 10px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
   background-color: #fff;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -74,17 +64,19 @@ input[type="text"] {
 }
 
 .doctor-item:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
+  box-shadow: 0 0 6px 2px rgb(140, 0, 255);
 }
 
 .doctor-item h3 {
-  margin: 0;
-  color: var(--primary-color);
+  margin: 5px;
+
+  color: #49433f;
 }
 
 .doctor-item p {
-  margin: 5px 0 0 0;
-  color: var(--text-color);
+  margin: 10px;
+  color: black;
 }
 
 .feedback-form {
@@ -93,31 +85,42 @@ input[type="text"] {
 
 .feedback-form h2 {
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: black;
 }
 
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--border-color);
   border-radius: 4px;
   resize: vertical;
   margin-bottom: 10px;
 }
 
+textarea:focus {
+  box-shadow: 0 0 10px 2px rgb(68, 0, 255);
+  border: none;
+}
+
 .doctors_btn {
   padding: 10px 20px;
-  background-color: var(--primary-color);
+  background-color: #494949;
+  border-radius: 30px;
   color: #fff;
   border: none;
+  margin: 5px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
   /* Smooth hover transition */
 }
 
 .doctors_btn:hover {
-  background-color: var(--secondary-color);
+  background-color: rgb(128, 128, 128);
+}
+
+.doctors_btn:active {
+  background-color: rgb(255, 132, 132);
+
 }
 
 .modal {
@@ -128,8 +131,9 @@ textarea {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
-  max-width: 400px;
+  width: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* border: 3px solid red; */
 }
 
 .modal-overlay {
@@ -149,17 +153,21 @@ textarea {
 @media (max-width: 768px) {
   .doctors-list-container {
     max-width: 100%;
+    /* box-shadow: none;
+    border: none; */
+    background-color: white;
   }
 
   .search-filter-container {
     flex-direction: column;
   }
 
-  .search-filter-container input[type="text"],
+  /* .search-filter-container input[type="text"],
   .search-filter-container select {
     margin-right: 0;
     margin-bottom: 10px;
-  }
+    
+  } */
 
   .doctor-item {
     flex-direction: column;
@@ -176,4 +184,9 @@ textarea {
     margin-top: 10px;
     margin-left: 0;
   }
+
+  .modal {
+    max-width: 90vw;
+  }
+
 }
