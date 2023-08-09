@@ -3,6 +3,9 @@ import AppError from "../utils/error.util.js";
 import cloudinary from 'cloudinary';
 import fs from 'fs/promises';
 import sendEmail from "../utils/sendEmail.js";
+import crypto from 'crypto';
+import bcrypt from 'bcryptjs'
+
 const cookieOptions={
     maxAge:7*24*60*60*1000,
     httpOnly:true,
@@ -74,11 +77,12 @@ const login=async (req,res,next)=>{
         if(!email || !password){
             return await next(new AppError('Invalid Data',400));
         }
-        const user=await User.findOne({
+        const user = await User.findOne({
             email
         }).select('+password');
-        if(!user || !user.comparePassword(password)){
-            return next( new AppError('Email or Password Cannot Match',400));
+    
+        if (!user || !(await bcrypt.compare(password,user.password))) {
+            return next(new AppError('Email or password does not match', 400));
         }
         const token=await user.generateJWToken();
         res.cookie('token',token,cookieOptions)  
@@ -139,7 +143,7 @@ const forgotPassword = async (req, res, next) => {
 
     await user.save();
 
-    const resetPasswordUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+    const resetPasswordUrl = `${process.env.FRONTEND_URL}/reset/${resetToken}`;
 
     console.log(resetPasswordUrl);
 
@@ -162,38 +166,39 @@ const forgotPassword = async (req, res, next) => {
         return next(new AppError(e.message, 500));
     }
 }
-const resetPassword = async (req, res) => {
+const resetPassword = async (req, res, next) => {
     const { resetToken } = req.params;
-
     const { password } = req.body;
 
     const forgotPasswordToken = crypto
         .createHash('sha256')
         .update(resetToken)
         .digest('hex');
+    const forgotPasswordExpiry=Date.now()
+    
+        const user = await User.findOne({
+            forgotPasswordToken,
+            forgotPasswordExpiry: { $gt: forgotPasswordExpiry }
+        });
 
-    const user = await User.findOne({
-        forgotPasswordToken,
-        forgotPasswordExpiry: { $gt: Date.now() }
-    });
+        if (!user) {
+            return next(new AppError('Token is invalid or expired, please try again', 400));
+        }
 
-    if (!user) {
-        return next(
-            new AppError('Token is invalid or expired, please try again', 400)
-        )
-    }
+        // ... Rest of the code ...
+        user.password = password;
+        user.forgotPasswordExpiry = undefined;
+        user.forgotPasswordToken = undefined;
+        
+        // Save the user with the updated password
+        await user.save();
 
-    user.password = password;
-    user.forgotPasswordToken = undefined;
-    user.forgotPasswordExpiry = undefined;
-
-    user.save();
-
-    res.status(200).json({
-        success: true,
-        message: 'Password changed successfully!'
-    })
-}
+        res.status(200).json({
+            success: true,
+            message: 'Password changed successfully!'
+        });
+    
+};
 
 export{
     register,
