@@ -98,7 +98,7 @@ function RegistrationForm({ type }) {
                     onChange={(e) => setImage(e.target.files[0])}
                   />
               </div>
-              <button className="button" type="submit">
+              <button className="button" type="submit" >
                 <span className="button-content">Register</span>
               </button>
             </form>
