@@ -7,6 +7,7 @@ import AmbulencePage from './components/ambulance';
 import MedicalShopPage from './components/Medical_store';
 import RegistrationForm from './components/Registration';
 import LoginForm from './components/Login';
+import MyProfile from './components/MyProfile';
 
 const App=()=>  {
   return (
@@ -20,6 +21,7 @@ const App=()=>  {
           <Route path="/Medical_store" element={<MedicalShopPage/>} className='MedicalShopPage'/> 
           <Route path="/Registration" element={<RegistrationForm/>} className='RegistrationForm'/> 
           <Route path="/login" element={<LoginForm/>} className='RegistrationForm'/> 
+          <Route path="/profile" element={<MyProfile/>} className='RegistrationForm'/> 
        </Routes>
         
     </>
