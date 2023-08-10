@@ -118,9 +118,9 @@
     width: 100%;
 }
 
-.card:hover {
+/* .card:hover {
     box-shadow: none;
-}
+} */
 
 .card:hover .btn {
     color: #212121;
