@@ -3,12 +3,15 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import './Registration.css';
 import log_reg_page_pic from "./image/log_reg_page_pic.jpg";
+import Modal from 'react-modal';
 
 function RegistrationForm({ type }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [image, setImage] = useState('');
+  const [registrationSuccessModalOpen, setRegistrationSuccessModalOpen] = useState(false);
+  const [alreadyRegisteredModalOpen, setAlreadyRegisteredModalOpen] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,6 +42,28 @@ function RegistrationForm({ type }) {
     <>
       <Navbar />
       <main id='reg_main'>
+      <Modal
+          isOpen={registrationSuccessModalOpen}
+          onRequestClose={() => setRegistrationSuccessModalOpen(false)}
+          contentLabel="Registration Success"
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          <h2>Registration Successful!</h2>
+          <p>Your registration has been successfully submitted.</p>
+          <button onClick={() => setRegistrationSuccessModalOpen(false)}>Close</button>
+        </Modal>
+        <Modal
+          isOpen={alreadyRegisteredModalOpen}
+          onRequestClose={() => setAlreadyRegisteredModalOpen(false)}
+          contentLabel="Already Registered"
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          <h2>Already Registered</h2>
+          <p>You are already registered with this email address.</p>
+          <button onClick={() => setAlreadyRegisteredModalOpen(false)}>Close</button>
+        </Modal>
         <section id='reg_left_sec'>
           <img src={log_reg_page_pic} alt="pic" />
         </section>
