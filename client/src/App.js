@@ -13,7 +13,6 @@ import FeedbackForm from './components/Feedback';
 const App = () => {
   return (
     <>
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} className="home-page" />
           <Route path="/About" element={<About />} className="about-page" />
@@ -25,7 +24,6 @@ const App = () => {
           <Route path="/profile" element={<MyProfile />} className="MyProfile" />
           <Route path="/Feedback" element={<FeedbackForm />} className="FeedbackForm" />
         </Routes>
-      </BrowserRouter>
     </>
   );
 };
