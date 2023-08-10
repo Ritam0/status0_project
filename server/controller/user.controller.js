@@ -71,30 +71,33 @@ const register=async (req,res,next)=>{
     }
     
 };
-const login=async (req,res,next)=>{
-    try{
-        const {email , password}=req.body;
-        if(!email || !password){
-            return await next(new AppError('Invalid Data',400));
-        }
-        const user = await User.findOne({
-            email
-        }).select('+password');
-    
-        if (!user || !(await bcrypt.compare(password,user.password))) {
-            return next(new AppError('Email or password does not match', 400));
-        }
-        const token=await user.generateJWToken();
-        res.cookie('token',token,cookieOptions)  
-        res.status(201).json({
-            sucess:true,
-            message:"Login Sucessful"
-        })
-    }catch(e){
-        return new AppError(e.message,500);
+const login = async (req, res, next) => {
+    try {
+      const { email, password } = req.body;
+      if (!email || !password) {
+        return await next(new AppError('Invalid Data', 400));
+      }
+      const user = await User.findOne({
+        email
+      }).select('+password');
+  
+      if (!user || !(await bcrypt.compare(password, user.password))) {
+        return next(new AppError('Email or password does not match', 400));
+      }
+      const token = await user.generateJWToken();
+      console.log('Generated token:', token); // Add this line
+      res.cookie('token', token, cookieOptions);
+      console.log('Cookie set'); // Add this line
+      res.status(201).json({
+        success: true,
+        message: 'Login Successful'
+      });
+    } catch (e) {
+      console.error('Login error:', e); // Add this line
+      return next(new AppError(e.message, 500));
     }
-    
-};
+  };
+  
 const logout=(req,res)=>{
     try{
         const cookieOption={

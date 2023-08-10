@@ -52,7 +52,7 @@ const MyProfile = () => {
           <h2 className='card-title_mp'>Hello, <span className='name1_mp'>{userDetails.name}</span></h2>
           <div className='card-content_mp'>
             <div className='user-details_mp'>
-                <img src={userDetails.avatar.secure_url} alt="" />
+            {/* <img src={userDetails.avatar.secure_url} alt="" /> */}
               <p><strong>Name:</strong> <span className='name_mp'>{userDetails.name}</span></p>
               <p><strong>User ID:</strong> <span className='userid_mp'>{userDetails._id}</span></p>
               <p><strong>Email:</strong> <span className='email_mp'>{userDetails.email}</span></p>
