@@ -15,24 +15,23 @@ const Feedback = () => {
                 <section id='feedback_form'>
                     <h1>FeedBack</h1>
 
-                    <form action="">
-                        <div class="form-container">
-                            <form class="form">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required="" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="textarea">How Can We Help You?</label>
-                                    <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
-                                </div>
-                                <button class="cssbuttons-io">
-                                    Submit
-                                </button>
-                            </form>
-                        </div>
 
-                    </form>
+                    <div className="form-container">
+                        <form className="form">
+                            <div className="form-group">
+                                <label htmlFor="name">Name</label>
+                                <input type="text" id="name" name="name" required="" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="textarea">How Can We Help You?</label>
+                                <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
+                            </div>
+                            <button className="cssbuttons-io">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
                 </section>
 
             </section>
