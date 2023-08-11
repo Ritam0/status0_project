@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Navbar from './Navbar';
-//import './MyProfile.css'
+import axios from 'axios';
 
 const MyProfile = () => {
   const navigate = useNavigate();
@@ -10,18 +9,26 @@ const MyProfile = () => {
 
   const callProfile = async () => {
     try {
+      const token = localStorage.getItem('token'); // Get the token from local storage
+  
+      if (!token) {
+        throw new Error('Token not found in local storage');
+      }
+  
       const response = await axios.get('http://localhost:3001/profile', {
-        withCredentials: true
+        headers: {
+          Authorization: `Bearer ${token}` // Set the token in the Authorization header
+        }
       });
-
+  
       const data = response.data;
-      console.log(data.user);
       setUserDetails(data.user);
     } catch (error) {
       console.error(error);
       navigate('/login'); // Navigate to login page
     }
   };
+  
 
   useEffect(() => {
     callProfile();
@@ -34,9 +41,10 @@ const MyProfile = () => {
         headers: {
           Cookie: "token"
         },
-        withCredentials: true
+        withCredentials: true // Include credentials, if needed (for cookies)
       });
 
+      localStorage.removeItem('token'); // Remove token from local storage
       window.alert("Logged out");
       navigate("/login");
     } catch (error) {
@@ -52,7 +60,6 @@ const MyProfile = () => {
           <h2 className='card-title_mp'>Hello, <span className='name1_mp'>{userDetails.name}</span></h2>
           <div className='card-content_mp'>
             <div className='user-details_mp'>
-                <img src={userDetails.avatar.secure_url} alt="" />
               <p><strong>Name:</strong> <span className='name_mp'>{userDetails.name}</span></p>
               <p><strong>User ID:</strong> <span className='userid_mp'>{userDetails._id}</span></p>
               <p><strong>Email:</strong> <span className='email_mp'>{userDetails.email}</span></p>
@@ -66,5 +73,3 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
-
-

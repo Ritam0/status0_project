@@ -8,8 +8,7 @@ import bcrypt from 'bcryptjs'
 
 const cookieOptions={
     maxAge:7*24*60*60*1000,
-    httpOnly:true,
-    secure:true
+    httpOnly:true
 }
 const register=async (req,res,next)=>{
     try{
@@ -60,8 +59,6 @@ const register=async (req,res,next)=>{
 
         await user.save();
         user.password=undefined;
-        const token=await user.generateJWToken();
-        res.cookie('token',token,cookieOptions)
         res.status(201).json({
             sucess:true,
             message:"Registration Sucessful"
@@ -71,52 +68,63 @@ const register=async (req,res,next)=>{
     }
     
 };
-const login=async (req,res,next)=>{
-    try{
-        const {email , password}=req.body;
-        if(!email || !password){
-            return await next(new AppError('Invalid Data',400));
-        }
-        const user = await User.findOne({
-            email
-        }).select('+password');
-    
-        if (!user || !(await bcrypt.compare(password,user.password))) {
-            return next(new AppError('Email or password does not match', 400));
-        }
-        const token=await user.generateJWToken();
-        res.cookie('token',token,cookieOptions)  
-        res.status(201).json({
-            sucess:true,
-            message:"Login Sucessful"
-        })
-    }catch(e){
-        return new AppError(e.message,500);
+const login = async (req, res, next) => {
+    try {
+      const { email, password } = req.body;
+      if (!email || !password) {
+        return await next(new AppError('Invalid Data', 400));
+      }
+      const user = await User.findOne({
+        email
+      }).select('+password');
+  
+      if (!user || !(await bcrypt.compare(password, user.password))) {
+        return next(new AppError('Email or password does not match', 400));
+      }
+      const token = await user.generateJWToken();
+      console.log('Generated token:', token); 
+      const cookieOption={
+        maxAge:24*60*60*1000,
+        httpOnly:true
+    };
+    res.cookie("token",token,cookieOption);
+      
+      res.status(201).json({
+        token:token,
+        success: true,
+        message: 'Login Successful'
+      });
+    } catch (e) {
+      console.error('Login error:', e); 
+      return next(new AppError(e.message, 500));
     }
-    
-};
-const logout=(req,res)=>{
-    try{
-        const cookieOption={
-            expires:new Date(),
-            httpOnly:true
-        }
-        res.cookie('token',null,cookieOption);
-        return res.status(200).json({
-            success:true,
-            message:"logged out"
-        })
-    }catch(e){
-        return res.status(400).json({
-            success:false,
-            message:e.message
-        })
+  };
+  
+  const logout = (req, res) => {
+    try {
+      // Remove the token from local storage
+      localStorage.removeItem('token');
+  
+      // Clear other local storage data if needed
+  
+      return res.status(200).json({
+        success: true,
+        message: 'Logged out'
+      });
+    } catch (e) {
+      return res.status(400).json({
+        success: false,
+        message: e.message
+      });
     }
-};
+  };
+  
 const profile=async (req,res)=>{
     try{
+        console.log(req);
         const userId=req.user.id;
         const user=await User.findById(userId);
+        console.log(user);
         res.status(200).json({
             succes:true,
             message:"user data mil geya",
