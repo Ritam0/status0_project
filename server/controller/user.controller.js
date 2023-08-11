@@ -138,9 +138,10 @@ const logout=(req,res)=>{
 // ..............................profile...........................//
 const profile=async (req,res)=>{
     try{
-        const userId=req.user.id;
-        console.log(userId);
-        const user=await User.findById(userId);
+        const email=req.query.mail;
+
+        console.log("1",email);
+        const user=await User.findOne({email});
         console.log(user);
         res.status(200).json({
             succes:true,

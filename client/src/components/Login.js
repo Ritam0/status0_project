@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
 import './Registration.css';
 import log_reg_page_pic from "./image/log_reg_page_pic.jpg";
 
 function LoginForm () {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
   const handleSubmit = async (event) => {
+    localStorage.clear();
     event.preventDefault();
   
     const formData = new FormData();
@@ -23,7 +26,9 @@ function LoginForm () {
     try {
       const response = await axios.post('http://localhost:3001/login', data);
       console.log('Login successful:', response.data);
-      // document.cookie = `token=${response.data.token}; path=/;`;
+      document.cookie = `token=${response.data.token}; path=/;`;
+      localStorage.setItem('token',response.data.token);
+      localStorage.setItem('mail',data.email);
       
       setEmail('');
       setPassword('');
@@ -31,6 +36,7 @@ function LoginForm () {
       
 
       window.alert('Login successful');
+      navigate("/profile");
     } catch (error) {
       console.error('Login error:', error);
     }

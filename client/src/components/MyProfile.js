@@ -6,16 +6,25 @@ import axios from 'axios';
 const MyProfile = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
+  
 
   const callProfile = async () => {
     try {
-      const response = await axios.get('localhost:3001/profile', {
-        withCredentials: true // Include credentials, if needed (for cookies)
+      const token = localStorage.getItem('token');
+      const mail = localStorage.getItem('mail');
+      if(!token){
+        navigate('/login');
+      }
+      const response = await axios.get('http://localhost:3001/profile', {
+        params: {
+          mail:mail
+        }
       });
 
-      const data = response.data;
+      const data = response.data.user;
       console.log(data);
       setUserDetails(data);
+      
     } catch (error) {
       console.error(error);
       navigate('/login'); // Navigate to login page
@@ -29,12 +38,13 @@ const MyProfile = () => {
   const logoutProfile = async (e) => {
     e.preventDefault();
     try {
-      await axios.get("/logout", {
-        headers: {
-          Cookie: "token"
-        },
-        withCredentials: true // Include credentials, if needed (for cookies)
-      });
+      // await axios.get("http://localhost:3001/logout", {
+      //   headers: {
+      //     Cookie: "token"
+      //   },
+      //   withCredentials: true // Include credentials, if needed (for cookies)
+      // });
+      localStorage.clear();
 
       window.alert("Logged out");
       navigate("/login");
@@ -42,23 +52,28 @@ const MyProfile = () => {
       console.error(error);
     }
   }
-
+  const ListService=()=>{
+    navigate("/customer");
+  }
+ // const URI=userDetails.avatar.secure_url;
   return (
-    <div className='mp_bg'>
-      <Navbar />
-      <form className='my_profile' method='GET'>
-        <div className='card_mp'>
-          <h2 className='card-title_mp'>Hello, <span className='name1_mp'>{userDetails.name}</span></h2>
-          <div className='card-content_mp'>
-            <div className='user-details_mp'>
-              <p><strong>Name:</strong> <span className='name_mp'>{userDetails.name}</span></p>
-              <p><strong>User ID:</strong> <span className='userid_mp'>{userDetails._id}</span></p>
-              <p><strong>Email:</strong> <span className='email_mp'>{userDetails.email}</span></p>
-            </div>
+    <div className='main_body'>
+      {/* <Navbar /> */}
+        <div className="main_card">
+          <div className="pic_card">
+            <img src='demo' alt="" className="image" />
           </div>
-          <button className='logout_profile' method='GET' onClick={logoutProfile}>Log out</button>
+          <div className="details">
+            <ul>
+              <li>Name:{userDetails.name}</li>
+              <li>UserId:{userDetails._id}</li>
+              <li>Email:{userDetails.email}</li>
+              <li></li>
+            </ul>
+          </div>
+          <button onClick={logoutProfile}>logout</button>
+          <button onClick={ListService}>List Your Service</button>
         </div>
-      </form>
     </div>
   );
 };
