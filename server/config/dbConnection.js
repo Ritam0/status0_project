@@ -9,7 +9,7 @@ const connect_db=async ()=>{
             console.log('connection succesful');
         }
     }catch(e){
-        console.log('connection lost');
+        console.error(e);
     }
 }
 export default connect_db;
