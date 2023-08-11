@@ -33,14 +33,15 @@ const Navbar = () => {
 
           </div>
         </div>
-        <ul id='navuls' style={{ height: ulVisible ? '' : '150px' }}>
+        <ul id='navuls' style={{ height: ulVisible ? '' : '170px' }}>
           <li><NavLink className="nav-link" to="/">Home</NavLink></li>
           <li>
             <NavLink className="nav-link" to="/Feedback">FeedBack</NavLink>
           {/* <a className="nav-link" href="#services_main">Our Services</a> */}
           </li>
           <li><NavLink className="nav-link" to="/About">About Us</NavLink></li>
-          <li><NavLink className="nav-link" to="/Registration">Login/Register</NavLink></li>
+          <li><NavLink className="nav-link" to="/Registration">Register</NavLink></li>
+          <li><NavLink className="nav-link" to="/login">LogIn</NavLink></li>
         </ul>
 
 

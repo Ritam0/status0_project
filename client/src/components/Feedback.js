@@ -11,31 +11,46 @@ const Feedback = () => {
 
             <Navbar />
 
-            <section id='feedback_sec'>
-                <section id='feedback_form'>
-                    <h1>FeedBack</h1>
+            <div className="bg">
+                <ul className="glass">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
 
 
-                    <div className="form-container">
-                        <form className="form">
-                            <div className="form-group">
-                                <label htmlFor="name">Name</label>
-                                <input type="text" id="name" name="name" required="" />
+                    <section id='feedback_sec'>
+                        <section id='feedback_form'>
+                            <h1>FeedBack</h1>
+
+
+                            <div className="form-container">
+                                <form className="form">
+                                    <div className="form-group">
+                                        <label htmlFor="name">Name</label>
+                                        <input type="text" id="name" name="name" required="" />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="textarea">How Can We Help You?</label>
+                                        <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
+                                    </div>
+                                    <button className="cssbuttons-io">
+                                        Submit
+                                    </button>
+                                </form>
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="textarea">How Can We Help You?</label>
-                                <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
-                            </div>
-                            <button className="cssbuttons-io">
-                                Submit
-                            </button>
-                        </form>
-                    </div>
 
-                </section>
+                        </section>
 
-            </section>
-
+                    </section>
+                </ul>
+            </div>
         </div>
     )
 }
