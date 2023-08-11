@@ -12,7 +12,7 @@
 #footer_heading {
     /* border: 3px solid blue; */
     /* text-align: center; */
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     padding: 0 10px;
 }
@@ -33,10 +33,15 @@
     /* border: 3px solid blue; */
     border-radius: 30px;
     padding: 0 10px;
-    margin: 0 10px;
+    margin: 10px;
     width: 30vw;
     height: fit-content;
-    /* box-shadow: 0 0 10px 2px black; */
+    box-shadow: 0 0 5px 2px black;
+}
+
+.contactbxs:hover{
+    box-shadow: 0 0 5px 2px rgb(255, 135, 135);
+
 }
 
 .ournames {
@@ -59,20 +64,22 @@
     /* border: 3px solid rgb(255, 91, 91); */
     display: flex;
     justify-content: center;
+    margin: auto;
     align-items: center;
     overflow: hidden;
-    height: 200px;
+    height: 150px;
+    width: 150px;
     /* height: fit-content; */
     /* margin: 10px; */
-    border-radius: 30px;
-    /* box-shadow: 0 0 10px 3px rgb(255, 129, 129); */
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px rgb(255, 129, 129);
 
 }
 
 .ourimgs img {
     /* border: 3px solid rgb(255, 60, 0); */
-    /* width: 200px; */
-    height: 300px;
+    width: 150px;
+    /* height: 300px; */
 
 }
 

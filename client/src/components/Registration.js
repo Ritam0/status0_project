@@ -48,7 +48,7 @@ function RegistrationForm({ type }) {
         </section>
         <section id='reg_right_sec'>
           <div className="registration-form-container">
-            <h1>Login/Register {type}</h1>
+            <h1>Register {type}</h1>
             <form onSubmit={handleSubmit}>
               <div className="form-control">
                 <input className="reg_input reg_input-alt" placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -77,7 +77,7 @@ function RegistrationForm({ type }) {
                     onChange={(e) => setImage(e.target.files[0])}
                   />
               </div>
-              <button className="button" type="submit">
+              <button className="button" type="submit" >
                 <span className="button-content">Register</span>
               </button>
             </form>

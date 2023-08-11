@@ -5,12 +5,12 @@ import fs from 'fs/promises';
 import sendEmail from "../utils/sendEmail.js";
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs'
-
 const cookieOptions={
     maxAge:7*24*60*60*1000,
     httpOnly:true,
     secure:true
 }
+// ..............................registration...........................//
 const register=async (req,res,next)=>{
     try{
         const {name,email,password}=req.body;
@@ -21,15 +21,20 @@ const register=async (req,res,next)=>{
         if(userExists){
             return next(new AppError('User Already Exists',400));
         }
+        console.log(name);
+        console.log(email);
+        console.log(password);
+        
         const user=await User.create({
             name,
             email,
             password,
             avatar:{
                 public_id:email,
-                secure_url:'https://res.cloudinary.com/du9jzqlpt/image/upload/v1674647316/avatar_drzgxv.jpg'
+                secure_url:process.env.DEMO
             }
         });
+        console.log('4');
         if(!user){
             return next(new AppError('registration faild!!!!',400));
         }
@@ -54,35 +59,42 @@ const register=async (req,res,next)=>{
                
                 
             }catch(e){
+                console.error('Caught an error:', e);
                 return await next(new AppError('upload faild try again!!!',500));
             }
         }
 
         await user.save();
         user.password=undefined;
+        console.log('1');
         const token=await user.generateJWToken();
+        console.log('2');
         res.cookie('token',token,cookieOptions)
         res.status(201).json({
             sucess:true,
             message:"Registration Sucessful"
         })
     }catch(e){
+        console.error('Caught an error:', e);
         return await next(new AppError('Invalid Data',400));
     }
     
 };
+
+
+
+// ..............................login...........................//
 const login=async (req,res,next)=>{
     try{
         const {email , password}=req.body;
         if(!email || !password){
             return await next(new AppError('Invalid Data',400));
         }
-        const user = await User.findOne({
+        const user=await User.findOne({
             email
         }).select('+password');
-    
-        if (!user || !(await bcrypt.compare(password,user.password))) {
-            return next(new AppError('Email or password does not match', 400));
+        if(!user || !user.comparePassword(password)){
+            return next( new AppError('Email or Password Cannot Match',400));
         }
         const token=await user.generateJWToken();
         res.cookie('token',token,cookieOptions)  
@@ -95,6 +107,11 @@ const login=async (req,res,next)=>{
     }
     
 };
+
+
+
+// ..............................logout...........................//
+
 const logout=(req,res)=>{
     try{
         const cookieOption={
@@ -113,6 +130,10 @@ const logout=(req,res)=>{
         })
     }
 };
+
+
+
+// ..............................profile...........................//
 const profile=async (req,res)=>{
     try{
         const userId=req.user.id;
@@ -127,6 +148,10 @@ const profile=async (req,res)=>{
     }
     
 };
+
+
+
+// ..............................forgot password...........................//
 const forgotPassword = async (req, res, next) => {
     const { email } = req.body;
 
@@ -166,6 +191,9 @@ const forgotPassword = async (req, res, next) => {
         return next(new AppError(e.message, 500));
     }
 }
+
+
+// ..............................reset password..........................//
 const resetPassword = async (req, res, next) => {
     const { resetToken } = req.params;
     const { password } = req.body;
