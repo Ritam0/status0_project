@@ -52,12 +52,12 @@ userSchema.pre('save',async function (next){
     this.password= await bcrypt.hash(this.password,10);
 });
 userSchema.methods={
-    generateJWToken(){
-        return jwt.sign(
-            {id:this._id , email:this.email},
+    generateJWToken: async function(){
+        return await jwt.sign(
+            {id:this._id , email:this.email },
             process.env.JWT_SECRET,
             {
-                expiresIn:'24h'
+                expiresIn: process.env.JWT_EXPIRY,
             }
         )
     },

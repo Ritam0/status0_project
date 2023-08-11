@@ -15,11 +15,7 @@ const MyProfile = () => {
         throw new Error('Token not found in local storage');
       }
   
-      const response = await axios.get('http://localhost:3001/profile', {
-        headers: {
-          Authorization: `Bearer ${token}` // Set the token in the Authorization header
-        }
-      });
+      const response = await axios.get('http://localhost:3001/profile',token);
   
       const data = response.data;
       setUserDetails(data.user);

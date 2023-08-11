@@ -12,7 +12,7 @@ userRoutes.post('/customer/registration', customer_register);
 userRoutes.post('/feedback', feedback_take);
 userRoutes.post('/login',login);
 userRoutes.get('/logout',logout);
-userRoutes.get('/profile' ,profile);
+userRoutes.get('/profile',isLoggedIn ,profile);
 userRoutes.post('/reset',forgotPassword);
 userRoutes.post('/reset/:resetToken', resetPassword);
 
