@@ -97,10 +97,12 @@ const login=async (req,res,next)=>{
             return next( new AppError('Email or Password Cannot Match',400));
         }
         const token=await user.generateJWToken();
-        res.cookie('token',token,cookieOptions)  
+        res.cookie('token',token,cookieOptions);
+        console.log(req.cookies.token); 
         res.status(201).json({
             sucess:true,
-            message:"Login Sucessful"
+            message:"Login Sucessful",
+            token
         })
     }catch(e){
         return new AppError(e.message,500);
@@ -137,7 +139,9 @@ const logout=(req,res)=>{
 const profile=async (req,res)=>{
     try{
         const userId=req.user.id;
+        console.log(userId);
         const user=await User.findById(userId);
+        console.log(user);
         res.status(200).json({
             succes:true,
             message:"user data mil geya",

@@ -9,22 +9,18 @@ const MyProfile = () => {
 
   const callProfile = async () => {
     try {
-      const token = localStorage.getItem('token'); // Get the token from local storage
-  
-      if (!token) {
-        throw new Error('Token not found in local storage');
-      }
-  
-      const response = await axios.get('http://localhost:3001/profile',token);
-  
+      const response = await axios.get('localhost:3001/profile', {
+        withCredentials: true // Include credentials, if needed (for cookies)
+      });
+
       const data = response.data;
-      setUserDetails(data.user);
+      console.log(data);
+      setUserDetails(data);
     } catch (error) {
       console.error(error);
       navigate('/login'); // Navigate to login page
     }
   };
-  
 
   useEffect(() => {
     callProfile();
@@ -40,7 +36,6 @@ const MyProfile = () => {
         withCredentials: true // Include credentials, if needed (for cookies)
       });
 
-      localStorage.removeItem('token'); // Remove token from local storage
       window.alert("Logged out");
       navigate("/login");
     } catch (error) {

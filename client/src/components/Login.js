@@ -23,6 +23,7 @@ function LoginForm () {
     try {
       const response = await axios.post('http://localhost:3001/login', data);
       console.log('Login successful:', response.data);
+      // document.cookie = `token=${response.data.token}; path=/;`;
       
       setEmail('');
       setPassword('');
