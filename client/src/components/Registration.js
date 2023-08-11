@@ -15,24 +15,25 @@ function RegistrationForm({ type }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email); // Use 'email' instead of 'contact'
     formData.append('password', password);
     formData.append('avatar', image);
-    console.log(formData);
   
     try {
       const response = await axios.post('http://localhost:3001/register', formData);
-      console.log('Registration successful:', response.data);
-  
-      setName('');
-      setEmail('');
-      setPassword('');
-      setImage('');
-
-      window.alert('Registration succesful');
+      setRegistrationSuccessModalOpen(true);
+      console.log(setRegistrationSuccessModalOpen);
+      if (response.data.success) {
+        setName('');
+        setEmail('');
+        setPassword('');
+        setImage('');
+        console.log(setRegistrationSuccessModalOpen);
+      } else {
+        setAlreadyRegisteredModalOpen(true);
+      }
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -42,28 +43,6 @@ function RegistrationForm({ type }) {
     <>
       <Navbar />
       <main id='reg_main'>
-      <Modal
-          isOpen={registrationSuccessModalOpen}
-          onRequestClose={() => setRegistrationSuccessModalOpen(false)}
-          contentLabel="Registration Success"
-          className="modal"
-          overlayClassName="modal-overlay"
-        >
-          <h2>Registration Successful!</h2>
-          <p>Your registration has been successfully submitted.</p>
-          <button onClick={() => setRegistrationSuccessModalOpen(false)}>Close</button>
-        </Modal>
-        <Modal
-          isOpen={alreadyRegisteredModalOpen}
-          onRequestClose={() => setAlreadyRegisteredModalOpen(false)}
-          contentLabel="Already Registered"
-          className="modal"
-          overlayClassName="modal-overlay"
-        >
-          <h2>Already Registered</h2>
-          <p>You are already registered with this email address.</p>
-          <button onClick={() => setAlreadyRegisteredModalOpen(false)}>Close</button>
-        </Modal>
         <section id='reg_left_sec'>
           <img src={log_reg_page_pic} alt="pic" />
         </section>
@@ -104,6 +83,28 @@ function RegistrationForm({ type }) {
             </form>
           </div>
         </section>
+        <Modal
+          isOpen={registrationSuccessModalOpen}
+          onRequestClose={() => setRegistrationSuccessModalOpen(false)}
+          contentLabel="Registration Success"
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          <h2>Registration Successful!</h2>
+          <p>Your registration has been successfully submitted.</p>
+          <button onClick={() => setRegistrationSuccessModalOpen(false)}>Close</button>
+        </Modal>
+        <Modal
+          isOpen={alreadyRegisteredModalOpen}
+          onRequestClose={() => setAlreadyRegisteredModalOpen(false)}
+          contentLabel="Already Registered"
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          <h2>Already Registered</h2>
+          <p>You are already registered with this email address.</p>
+          <button onClick={() => setAlreadyRegisteredModalOpen(false)}>Close</button>
+        </Modal>
       </main>
     </>
   );
