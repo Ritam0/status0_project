@@ -24,9 +24,11 @@ function RegistrationForm({ type }) {
   
     try {
       const response = await axios.post('http://localhost:3001/register', formData);
+      setStatus(response.data.sucess);
+      console.log(status);
       
       console.log(response.data);
-      if (response.data.success===true) {
+      if (status) {
         setName('');
         setEmail('');
         setPassword('');

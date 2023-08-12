@@ -81,17 +81,13 @@ const AboutUsPage = () => {
             </section>
 
             <section id='about_right_sec'>
-              Welcome to our website! We are a passionate team dedicated to providing high-quality fitness services and promoting a healthy lifestyle.
-              <br /><br />
-              Our mission is to help individuals achieve their fitness goals and improve their overall well-being. We offer a wide range of fitness programs, including gym workouts, yoga classes, personal training, and more.
-              <br /><br />
-              With our experienced trainers and state-of-the-art facilities, we strive to create a supportive and motivating environment for our clients. Whether you're a beginner or an advanced fitness enthusiast, we have something for everyone.
-              <br /><br />
-              Join us today and embark on a journey towards a healthier and happier you. We are here to guide and support you every step of the way.
-              <br /><br />
-              Feel free to explore our website and learn more about the services we offer. If you have any questions or need assistance, don't hesitate to reach out to our friendly team.
-              <br /><br />
-              Thank you for choosing us as your fitness partner!
+            Welcome to Digi-Cure, your premier destination for reliable medical information and compassionate care. At Digi-Cure, we are dedicated to empowering individuals with accurate health insights and connecting them with top-notch medical professionals.
+
+            Our mission is to be your trusted source for all things related to health and wellness. Whether you're seeking information about a specific medical condition, exploring treatment options, or looking for expert advice, our comprehensive resources are here to guide you.
+
+            Our team of experienced medical professionals is committed to providing you with the highest level of care. We understand that navigating the complexities of healthcare can be daunting, which is why we strive to make your journey as smooth as possible. Our user-friendly platform ensures easy access to valuable articles, videos, and resources that cover a wide range of medical topics.
+
+            At Digi-Cure, we believe that everyone deserves the best possible care. That's why we work tirelessly to deliver accurate and up-to-date information, promoting informed decisions about your health. Whether you're a patient, caregiver, or simply someone who wants to stay well-informed, we invite you to explore our website and join us on the path to a healthier and happier life. Your well-being is our priority, and we're here to support you every step of the way.
             </section>
           </section>
 
