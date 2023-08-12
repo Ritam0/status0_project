@@ -1,4 +1,3 @@
-
 We Developed a Medical web Application using Node Js,Express JS, Mongo DB Backend And in Frontend we used React Js. We also used postman API in this Application.Our website was meticulously developed by a dedicated team of designers and programmers. From concept to code, we fused creativity and technology to bring you an intuitive and visually captivating platform. Seamlessly integrating design and functionality, we've created an engaging digital experience tailored to your needs.
 How did it work?
 Medical web Application has a full Stack Project.Our platform operates through a user-friendly interface, offering intuitive navigation and interactive elements. Users can effortlessly explore informative sections, access comprehensive medical insights, and seamlessly connect with healthcare professionals. Behind the scenes, robust backend systems ensure data security, while real-time updates and responsive design guarantee a smooth experience across devices. Experience the synergy of cutting-edge technology and user-centric design.
@@ -53,40 +52,48 @@ live server Extension (only for Vs code)
 
 🚀 Doctor's_List
 
+<div align="center">
 <img src="client/src/components/image/Doctor's_list.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-
 🚀 Doctor's_Details
 
+<div align="center">
 <img src="client/src/components/image/Doctor's_Details.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 Booking_page
 
+<div align="center">
 <img src="client/src/components/image/Booking_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 About_us
 
+<div align="center">
 <img src="client/src/components/image/About_us.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 Register_page
 
+<div align="center">
 <img src="client/src/components/image/Register_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 Myprofile_page
 
+<div align="center">
 <img src="client/src/components/image/Myprofile_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 Demo of The FILE SHARE Application
 
-[![Digi-Cure Introduction Video](client/src/components/image/Demo.mp4)]
+[![Digi-Cure Introduction Video](client/src/components/image/Home_page.png)](client/src/components/image/Demo.mp4)
 
 Thank you for your interest in Digi-Cure! For more information, explore our [website](https://www.digi-cure.com) or refer to the [documentation](STATUS0_PROJECT/README.md).
+
+
+
 
 🚀 DEVELOPER
 
@@ -95,5 +102,3 @@ Ritam Majunder
 Soumojit Shome
 
 Bibhab Mukhopadhyay
-
-
