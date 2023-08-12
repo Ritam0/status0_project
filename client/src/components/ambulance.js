@@ -60,7 +60,7 @@ const AmbulanceServicesList = () => {
           </li>
         ))}
       </ul>
-      <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
+      <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
     </div>
     </>
   );

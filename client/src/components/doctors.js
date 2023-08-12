@@ -113,7 +113,7 @@ const DoctorsList = () => {
           />
           <button className='doctors_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
         </div>
-        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
+        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
       </div>
       
     </>

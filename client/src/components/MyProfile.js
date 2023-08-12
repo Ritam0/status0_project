@@ -93,11 +93,12 @@ const MyProfile = () => {
               <button className="myproflie_button" onClick={ListService}>
                 <p className="text">List Your Service</p>
               </button>
+              <button className='myproflie_button'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
             </div>
           </div>
         </div>
       </div>
-      <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
+      
     </>
   );
 };
