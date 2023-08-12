@@ -14,10 +14,10 @@ const Home = () => {
 
                 <section id='left_sec'>
                     <section id='home_heading'>
-                        Hello. <span> World. </span>
+                        Healthy <span> Insights </span>
                     </section>
                     <section id='home_desc'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus, rem magni omnis ex ab,
+                    Empowering Health and Wellness: Your Trusted Source for Medical Insights and Care
                     </section>
                     <section id='home_left_btn'>
                         <a href="#services_main">
