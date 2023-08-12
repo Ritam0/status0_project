@@ -5,19 +5,32 @@ import Modal from 'react-modal';
 import './doctors.css';
 
 const doctorsData = [
-  { id: 1, link: 'https://rzp.io/l/uJ9TXVb6B', name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', },
-  { id: 2, name: 'Dr. Soumyakanti Dutta',link:'https://rzp.io/l/dYstCjMGSv', specialization: 'Cardiologist', Experience: '15+ years', Location: 'Chandannagar Hospital', Fees: '1200' },
-  { id: 3, name: 'Dr. Sumanta Chatterjee',link:'https://rzp.io/l/TXif8Cu', specialization: 'Dermatologist', Experience: '14+ years', Location: 'beleghata ID Hospital', Fees: '700' },
-  { id: 4, name: 'Dr. Soumyabrata acharya', link:'https://rzp.io/l/QvNVernesv',specialization: 'Pediatrician', Experience: '10+ years', Location: 'SSKM Hospital', Fees: '800' },
-  { id: 5, name: 'Dr. Dipanwita Roy',link:'https://rzp.io/l/4eTnS6ls', specialization: 'Pediatrician', Experience: '5+ years', Location: 'KOLkata Medical College & Hospital', Fees: '1000' },
+  { id: 1, name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', availableDays: ['Monday', 'Sunday', 'Wednesday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 2, name: 'Dr. Soumyakanti Dutta', specialization: 'Cardiologist', Experience: '15+ years', Location: 'Chandannagar Hospital', Fees: '1200', availableDays: ['Monday', 'Wednesday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 3, name: 'Dr. Sumanta Chatterjee', specialization: 'Dermatologist', Experience: '14+ years', Location: 'Beleghata ID Hospital', Fees: '700', availableDays: ['Monday', 'Wednesday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 4, name: 'Dr. Soumyabrata Acharya', specialization: 'Pediatrician', Experience: '10+ years', Location: 'SSKM Hospital', Fees: '800', availableDays: ['Monday', 'Wednesday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 5, name: 'Dr. Dipanwita Roy', specialization: 'Pediatrician', Experience: '5+ years', Location: 'KOLkata Medical College & Hospital', Fees: '1000', availableDays: ['Monday', 'Sunday', 'Wednesday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 6, name: 'Dr. John Smith', specialization: 'Cardiologist', Experience: '18+ years', Location: 'City Hospital', Fees: '900', availableDays: ['Tuesday', 'Thursday'], availableHours: ['9:00 AM', '1:00 PM', '4:00 PM'] },
+  { id: 7, name: 'Dr. Emily Brown', specialization: 'Dermatologist', Experience: '12+ years', Location: 'Community Clinic', Fees: '1100', availableDays: ['Monday', 'Wednesday', 'Sunday', 'Friday'], availableHours: ['11:00 AM', '3:00 PM', '6:00 PM'] },
+  { id: 8, name: 'Dr. Laura Johnson', specialization: 'Pediatrician', Experience: '16+ years', Location: 'Women\'s Health Center', Fees: '950', availableDays: ['Monday', 'Tuesday', 'Thursday'], availableHours: ['9:30 AM', '2:30 PM', '5:30 PM'] },
+  { id: 9, name: 'Dr. Michael Wilson', specialization: 'Cardiologist', Experience: '22+ years', Location: 'OrthoCare Hospital', Fees: '1200', availableDays: ['Monday', 'Wednesday', 'Friday'], availableHours: ['9:00 AM', '1:00 PM', '4:00 PM'] },
+  { id: 10, name: 'Dr. Rachel Adams', specialization: 'Dermatologist', Experience: '14+ years', Location: 'Mind Wellness Clinic', Fees: '1000', availableDays: ['Tuesday', 'Thursday'], availableHours: ['10:30 AM', '2:30 PM', '5:30 PM'] },
+  { id: 11, name: 'Dr. Maria Garcia', specialization: 'Cardiologist', Experience: '17+ years', Location: 'HeartCare Clinic', Fees: '850', availableDays: ['Tuesday', 'Sunday', 'Thursday', 'Saturday'], availableHours: ['9:30 AM', '2:30 PM', '5:30 PM'] },
+  { id: 12, name: 'Dr. William Lee', specialization: 'Dermatologist', Experience: '13+ years', Location: 'Skin Health Center', Fees: '950', availableDays: ['Monday', 'Wednesday', 'Friday'], availableHours: ['11:00 AM', '3:00 PM', '6:00 PM'] },
+  { id: 13, name: 'Dr. Elizabeth Taylor', specialization: 'Pediatrician', Experience: '9+ years', Location: 'ChildCare Clinic', Fees: '750', availableDays: ['Tuesday', 'Thursday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 14, name: 'Dr. James Anderson', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Heartbeat Hospital', Fees: '1100', availableDays: ['Wednesday', 'Friday'], availableHours: ['9:00 AM', '1:00 PM', '4:00 PM'] },
+  { id: 15, name: 'Dr. Anna Martinez', specialization: 'Dermatologist', Experience: '14+ years', Location: 'Glow Skin Care', Fees: '800', availableDays: ['Monday', 'Sunday', 'Thursday'], availableHours: ['10:30 AM', '2:30 PM', '5:30 PM'] },
+  { id: 16, name: 'Dr. Benjamin White', specialization: 'Pediatrician', Experience: '11+ years', Location: 'Healthy Kids Clinic', Fees: '900', availableDays: ['Monday', 'Tuesday', 'Wednesday'], availableHours: ['9:00 AM', '1:00 PM', '4:00 PM'] },
+  { id: 17, name: 'Dr. Emma Carter', specialization: 'Cardiologist', Experience: '19+ years', Location: 'HeartWell Clinic', Fees: '950', availableDays: ['Tuesday', 'Thursday'], availableHours: ['10:00 AM', '2:00 PM', '5:00 PM'] },
+  { id: 18, name: 'Dr. Daniel Brown', specialization: 'Dermatologist', Experience: '15+ years', Location: 'Radiant Skin Center', Fees: '1050', availableDays: ['Wednesday', 'Friday'], availableHours: ['9:30 AM', '2:30 PM', '5:30 PM'] },
+  { id: 19, name: 'Dr. Olivia Adams', specialization: 'Pediatrician', Experience: '12+ years', Location: 'Little Ones Clinic', Fees: '700', availableDays: ['Monday', 'Wednesday'], availableHours: ['11:00 AM', '3:00 PM', '6:00 PM'] },
+  { id: 20, name: 'Dr. Matthew Smith', specialization: 'Cardiologist', Experience: '18+ years', Location: 'HeartCare Clinic', Fees: '1000', availableDays: ['Tuesday', 'Thursday'], availableHours: ['10:30 AM', '2:30 PM', '5:30 PM'] },
   // Add more doctor data here
 ];
 
 const DoctorsList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialization, setSelectedSpecialization] = useState('');
-  const [feedback, setFeedback] = useState('');
-
   const [selectedDoctor, setSelectedDoctor] = useState(null);
 
   const handleOpenModal = (doctor) => {
@@ -32,19 +45,24 @@ const DoctorsList = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleBookNow = (doctorName) => {
-    alert(`Booking appointment with Dr. ${doctorName}`);
-  };
-
   const handleSpecializationChange = (event) => {
     setSelectedSpecialization(event.target.value);
   };
 
-  const handleFeedbackChange = (event) => {
-    setFeedback(event.target.value);
-  };
+  const currentDateTime = new Date();
+  const currentDayIndex = currentDateTime.getDay(); // Get the index of the current day (0 for Sunday, 1 for Monday, etc.)
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const currentDay = daysOfWeek[currentDayIndex];
+  const currentTime = currentDateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  
 
-  const filteredDoctors = doctorsData.filter(
+  const availableDoctors = doctorsData.filter(doctor => {
+    const isAvailableDay = doctor.availableDays.includes(currentDay);
+    const isAvailableHour = doctor.availableHours.some(time => time >= currentTime);
+    return isAvailableDay && isAvailableHour;
+  });
+
+  const filteredDoctors = availableDoctors.filter(
     (doctor) =>
       doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (selectedSpecialization === '' ||
