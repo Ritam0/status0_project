@@ -6,6 +6,7 @@ import axios from 'axios';
 const MyProfile = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
+  const [uri, setUri] = useState(' const [userDetails, setUserDetails] = useState({});');
   
 
   const callProfile = async () => {
@@ -24,6 +25,7 @@ const MyProfile = () => {
       const data = response.data.user;
       console.log(data);
       setUserDetails(data);
+      setUri(data.avatar.secure_url);
       
     } catch (error) {
       console.error(error);
@@ -55,13 +57,13 @@ const MyProfile = () => {
   const ListService=()=>{
     navigate("/customer");
   }
- // const URI=userDetails.avatar.secure_url;
+
   return (
     <div className='main_body'>
       {/* <Navbar /> */}
         <div className="main_card">
           <div className="pic_card">
-            <img src='demo' alt="" className="image" />
+            <img src={uri} alt="" className="image" />
           </div>
           <div className="details">
             <ul>
