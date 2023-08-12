@@ -114,6 +114,15 @@ textarea:focus {
   /* Smooth hover transition */
 }
 
+.doctors_navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.doctors_navlink:hover {
+  text-decoration: underline;
+}
+
 .doctors_btn:hover {
   background-color: rgb(128, 128, 128);
 }
