@@ -42,12 +42,22 @@
     align-items: center;
     margin: 5px;
     font-size: 18px;
+    padding: 5px;
     font-weight: bold;
+}
+.myprofile_pic_card p{
+    padding: 10px;
 }
 
 .myprofile_pic_card img {
     /* border: 3px solid green; */
     width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px red;
+}
+.myprofile_pic_card img:hover{
+    box-shadow: 0 0 8px 2px rgb(173, 4, 246);
+
 }
 
 .myprofile_right_sec {

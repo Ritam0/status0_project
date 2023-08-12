@@ -67,7 +67,7 @@ const MyProfile = () => {
         <div className="myprofile_main_card">
           <div className="myprofile_pic_card">
             <img src={uri} alt="user_pic" className="image" />
-            <p>Demo Text</p>
+            <p>Hey {userDetails.name}</p>
           </div>
 
           <div className="myprofile_right_sec">
@@ -75,9 +75,9 @@ const MyProfile = () => {
             <h1>Your Details</h1>
             <div className="myprofile_details">
               <ul>
-                <li>Name:{userDetails.name}</li>
-                <li>UserId:{userDetails._id}</li>
-                <li>Email:{userDetails.email}</li>
+                <li>Name: {userDetails.name}</li>
+                <li>UserId: {userDetails._id}</li>
+                <li>Email: {userDetails.email}</li>
                 <li></li>
               </ul>
             </div>
