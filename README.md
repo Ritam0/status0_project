@@ -84,9 +84,16 @@ live server Extension (only for Vs code)
 
 🚀 Demo of The FILE SHARE Application
 
+[![Digi-Cure Introduction Video](client/src/components/image/Demo.mp4)]
+
+Thank you for your interest in Digi-Cure! For more information, explore our [website](https://www.digi-cure.com) or refer to the [documentation](docs/README.md).
 
 🚀 DEVELOPER
+
 Ritam Majunder
+
 Soumojit Shome
+
 Bibhab Mukhopadhyay
+
 
