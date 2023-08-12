@@ -5,6 +5,7 @@ import AppError from "../utils/error.util.js";
 const customer_register=async (req,res,next)=>{
     try{
         const {name,email,number,role,serviceId_link}=req.body;
+        console.log(name);
         if(!name || !email || !number || !role || !serviceId_link){
             return next (new AppError('All data is required',400));
         }

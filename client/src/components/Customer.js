@@ -19,17 +19,20 @@ function CustomerRegistration({ type }) {
     formData.append('number', number);
     formData.append('role',role);
     formData.append('serviceId_link',serviceId_link);
+    const customerData={
+        name,email,number,role,serviceId_link
+    }
 
   
     try {
-      const response = await axios.post('http://localhost:3001/customer', formData);
-      
+      const response = await axios.post('http://localhost:3001/customer/registration',customerData );
       
         setName('');
         setEmail('');
         setNumber('');
         setRole('');
         setServiceId_link('');
+        window.alert('Thanks for Registration, after some verification you will be notified');
     } catch (error) {
       console.error('Registration error:', error);
     }
