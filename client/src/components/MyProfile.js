@@ -59,6 +59,9 @@ const MyProfile = () => {
   const ListService = () => {
     navigate("/list-service");
   }
+  const Feedback = () => {
+    navigate("/Feedback");
+  }
 
   return (
     <>
@@ -93,7 +96,11 @@ const MyProfile = () => {
               <button className="myproflie_button" onClick={ListService}>
                 <p className="text">Register As Doctor</p>
               </button>
-              <button className='myproflie_button'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
+              <button className="myproflie_button" onClick={Feedback}>
+                <p className="text">Give Feedback</p>
+              </button>
+              {/* <NavLink className='mypfeedback_btn' to="/Feedback">
+              <button className='myproflie_button'>Give Feedback</button></NavLink> */}
             </div>
           </div>
         </div>

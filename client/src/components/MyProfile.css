@@ -132,9 +132,13 @@
 .myproflie_button:hover {
     background-color: transparent;
 }
+.mypfeedback_btn{
+    color: white;
+}
 
 .myproflie_button:hover .text {
     color: #181717;
+    
 }
 
 .myproflie_button:hover svg path {
