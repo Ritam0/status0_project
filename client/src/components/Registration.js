@@ -12,6 +12,7 @@ function RegistrationForm({ type }) {
   const [image, setImage] = useState('');
   const [registrationSuccessModalOpen, setRegistrationSuccessModalOpen] = useState(false);
   const [alreadyRegisteredModalOpen, setAlreadyRegisteredModalOpen] = useState(false);
+  const [status, setStatus] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,14 +24,14 @@ function RegistrationForm({ type }) {
   
     try {
       const response = await axios.post('http://localhost:3001/register', formData);
-      setRegistrationSuccessModalOpen(true);
-      console.log(setRegistrationSuccessModalOpen);
-      if (response.data.success) {
+      
+      console.log(response.data);
+      if (response.data.success===true) {
         setName('');
         setEmail('');
         setPassword('');
         setImage('');
-        console.log(setRegistrationSuccessModalOpen);
+        setRegistrationSuccessModalOpen(true);
       } else {
         setAlreadyRegisteredModalOpen(true);
       }
