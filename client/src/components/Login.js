@@ -41,6 +41,9 @@ function LoginForm () {
       console.error('Login error:', error);
     }
   };
+  // const ForgotPassword=()=>{
+  //   const response = await axios.post('http://localhost:3001/login', data);
+  // }
 
   return (
     <>
@@ -64,6 +67,9 @@ function LoginForm () {
               <button className="button" type="submit">
                 <span className="button-content">Login</span>
               </button>
+              {/* <button className="button" type="forgot">
+                <span className="button-content" onClick={ForgotPassword}>forgot password</span>
+              </button> */}
             </form>
           </div>
         </section>
