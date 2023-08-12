@@ -53,13 +53,13 @@ live server Extension (only for Vs code)
 
 🚀 Doctor's_List
 
-<img src="client/src/components/image/Doctors_list.png" alt="pic" align="center" style="width: 100%;" />
+<img src="client/src/components/image/Doctor's_list.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 
 🚀 Doctor's_Details
 
-<img src="client/src/components/image/Doctor's_list.png" alt="pic" align="center" style="width: 100%;" />
+<img src="client/src/components/image/Doctor's_Details.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
 🚀 Booking_page
