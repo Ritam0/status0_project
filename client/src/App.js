@@ -10,6 +10,7 @@ import LoginForm from './components/Login';
 import MyProfile from './components/MyProfile';
 import FeedbackForm from './components/Feedback';
 import CustomerRegistration from './components/Customer';
+import Services from './components/Services';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/profile" element={<MyProfile />} className="MyProfile" />
           <Route path="/Feedback" element={<FeedbackForm />} className="FeedbackForm" />
           <Route path="/list-service" element={<CustomerRegistration/>} className="FeedbackForm" />
+          <Route path="/services" element={<Services/>} className="FeedbackForm" />
         </Routes>
     </>
   );

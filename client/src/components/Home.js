@@ -8,7 +8,7 @@ import home_doctor_pic from "./image/home_doctor_pic.jpg"
 const Home = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
            
             <main id='home_main'>
 

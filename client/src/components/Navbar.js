@@ -41,11 +41,10 @@ const Navbar = () => {
         </div>
         <ul id='navuls' style={{ height: ulVisible ? '' : '170px' }}>
           <li><NavLink className="nav-link" to="/">Home</NavLink></li>
-          {/* <li>
-          <a className="nav-link" href="#services_main">Our Services</a>
-          </li> */}
+          <li>
+          <NavLink className="nav-link" to="/services">Our Services</NavLink>
+          </li>
           <li><NavLink className="nav-link" to="/About">About Us</NavLink></li>
-          {/* <li></li> */}
           <li><NavLink className="nav-link" to="/Registration">Register</NavLink></li>
           <li>{localStorage.getItem("token") != null ? <NavLink className="nav-link" to="/profile">Profile</NavLink> :<NavLink className="nav-link" to="/login">Login</NavLink> } </li>
         </ul>

@@ -58,7 +58,8 @@
     align-items: center;
     justify-content: center;
     width: 320px;
-    height: 350px;
+    /* height: 350px; */
+    height: fit-content;
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.61); */
     box-shadow: 0 10px 20px rgb(255, 123, 0);
     padding: 32px;
@@ -155,7 +156,7 @@
     .card {
         padding: 20px;
         width: 88vw;
-        height: 300px;
+        /* height: 300px; */
 
     }
 
