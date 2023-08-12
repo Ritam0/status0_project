@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar'
-import Services from './Services'
+// import Services from './Services'
 import Footer from './Footer'
 import './Home.css';
 import home_doctor_pic from "./image/home_doctor_pic.jpg"
@@ -25,8 +25,12 @@ const Home = () => {
                         {/* <button className="button">
                             <NavLink  to="/doctors">Our Doctors</NavLink>
                         </button> */}
-                        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/doctors">Our Doctors</NavLink></button>
-
+                        {/* <button className='doctors_btn'><NavLink className="doctors_navlink" to="/doctors">Our Doctors</NavLink></button> */}
+                        <NavLink className="doctors_navlink" to="/doctors">
+                            <button className="button" type="submit" >
+                                <span className="button-content">Our Doctors</span>
+                            </button>
+                        </NavLink>
 
                     </section>
 
