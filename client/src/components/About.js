@@ -81,13 +81,15 @@ const AboutUsPage = () => {
             </section>
 
             <section id='about_right_sec'>
-            Welcome to Digi-Cure, your premier destination for reliable medical information and compassionate care. At Digi-Cure, we are dedicated to empowering individuals with accurate health insights and connecting them with top-notch medical professionals.
+              Welcome to Digi-Cure, your premier destination for reliable medical information and compassionate care. At Digi-Cure, we are dedicated to empowering individuals with accurate health insights and connecting them with top-notch medical professionals.
+              <br /><br />
+              Our mission is to be your trusted source for all things related to health and wellness. Whether you're seeking information about a specific medical condition, exploring treatment options, or looking for expert advice, our comprehensive resources are here to guide you.
 
-            Our mission is to be your trusted source for all things related to health and wellness. Whether you're seeking information about a specific medical condition, exploring treatment options, or looking for expert advice, our comprehensive resources are here to guide you.
+              <br /><br />
+              Our team of experienced medical professionals is committed to providing you with the highest level of care. We understand that navigating the complexities of healthcare can be daunting, which is why we strive to make your journey as smooth as possible. Our user-friendly platform ensures easy access to valuable articles, videos, and resources that cover a wide range of medical topics.
+              <br /><br />
 
-            Our team of experienced medical professionals is committed to providing you with the highest level of care. We understand that navigating the complexities of healthcare can be daunting, which is why we strive to make your journey as smooth as possible. Our user-friendly platform ensures easy access to valuable articles, videos, and resources that cover a wide range of medical topics.
-
-            At Digi-Cure, we believe that everyone deserves the best possible care. That's why we work tirelessly to deliver accurate and up-to-date information, promoting informed decisions about your health. Whether you're a patient, caregiver, or simply someone who wants to stay well-informed, we invite you to explore our website and join us on the path to a healthier and happier life. Your well-being is our priority, and we're here to support you every step of the way.
+              At Digi-Cure, we believe that everyone deserves the best possible care. That's why we work tirelessly to deliver accurate and up-to-date information, promoting informed decisions about your health. Whether you're a patient, caregiver, or simply someone who wants to stay well-informed, we invite you to explore our website and join us on the path to a healthier and happier life. Your well-being is our priority, and we're here to support you every step of the way.
             </section>
           </section>
 
