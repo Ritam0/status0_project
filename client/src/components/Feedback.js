@@ -62,9 +62,9 @@ const Feedback = () => {
                                         <label htmlFor="name">Name</label>
                                         <input type="text" id="name" name="name" required="" value={name} onChange={(e) => setName(e.target.value)} />
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group msg">
                                         <label htmlFor="textarea">How Can We Help You?</label>
-                                        <input name="reveiw" id="textarea" rows="10" cols="50" required="" value={reveiw} onChange={(e) => setReveiw(e.target.value)}></input>
+                                        <input name="reveiw" id="textarea" required="" value={reveiw} onChange={(e) => setReveiw(e.target.value)}></input>
                                     </div>
                                     <button className="cssbuttons-io" onClick={giveFeedback}>
                                         Submit
