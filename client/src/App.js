@@ -9,6 +9,7 @@ import RegistrationForm from './components/Registration';
 import LoginForm from './components/Login';
 import MyProfile from './components/MyProfile';
 import FeedbackForm from './components/Feedback';
+import CustomerRegistration from './components/Customer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/login" element={<LoginForm />} className="LoginForm" />
           <Route path="/profile" element={<MyProfile />} className="MyProfile" />
           <Route path="/Feedback" element={<FeedbackForm />} className="FeedbackForm" />
+          <Route path="/list-service" element={<CustomerRegistration/>} className="FeedbackForm" />
         </Routes>
     </>
   );
