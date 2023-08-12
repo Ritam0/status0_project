@@ -46,3 +46,7 @@ Thank you for choosing Digi-Cure! We hope you find this README file helpful as y
   <img src="client/src/components/image/Home_page.png" alt="pic" align="center" style="width: 40%;" />
 </div>
 
+<div align="center">
+  <img src="client/src/components/image/Our_services.png" alt="pic" align="center" style="width: 40%;" />
+</div>
+
