@@ -86,11 +86,11 @@ const MyProfile = () => {
 
             <div className="myproflie_btns">
 
-              <button class="myproflie_button" onClick={logoutProfile}>
-                <p class="text">logout</p>
+              <button className="myproflie_button" onClick={logoutProfile}>
+                <p className="text">logout</p>
               </button>
-              <button class="myproflie_button" onClick={ListService}>
-                <p class="text">List Your Service</p>
+              <button className="myproflie_button" onClick={ListService}>
+                <p className="text">List Your Service</p>
               </button>
             </div>
           </div>

@@ -94,10 +94,6 @@ const AboutUsPage = () => {
           </section>
 
 
-
-
-
-
         </main>
         <Footer />
       </div>
