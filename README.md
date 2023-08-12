@@ -43,5 +43,5 @@ Review the project's licensing information to understand how you can use, share,
 Thank you for choosing Digi-Cure! We hope you find this README file helpful as you embark on your journey with this project. If you have any questions or need further assistance, please don't hesitate to reach out to our support team or community. Happy exploring!
 
 <div align="center">
-<img src={Home} alt="pic" /> align="center" style="width: 40%" />
+<img src={Home} alt="pic" align="center" style="width: 40%" />
 </div>
