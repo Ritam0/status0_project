@@ -42,5 +42,11 @@ Review the project's licensing information to understand how you can use, share,
 
 Thank you for choosing Digi-Cure! We hope you find this README file helpful as you embark on your journey with this project. If you have any questions or need further assistance, please don't hesitate to reach out to our support team or community. Happy exploring!
 
-('!HOME PAGE(Home.png)')
-('!OUR SERVICES(Our_services.png)')
+<div align="center">
+  <img src="client/src/components/image/Home_page.png" alt="pic" align="center" style="width: 40%;" />
+</div>
+
+<div align="center">
+  <img src="client/src/components/image/Our_services.png" alt="pic" align="center" style="width: 40%;" />
+</div>
+
