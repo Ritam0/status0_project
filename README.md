@@ -1,56 +1,104 @@
+We Developed a Medical web Application using Node Js,Express JS, Mongo DB Backend And in Frontend we used React Js. We also used postman API in this Application.Our website was meticulously developed by a dedicated team of designers and programmers. From concept to code, we fused creativity and technology to bring you an intuitive and visually captivating platform. Seamlessly integrating design and functionality, we've created an engaging digital experience tailored to your needs.
+How did it work?
+Medical web Application has a full Stack Project.Our platform operates through a user-friendly interface, offering intuitive navigation and interactive elements. Users can effortlessly explore informative sections, access comprehensive medical insights, and seamlessly connect with healthcare professionals. Behind the scenes, robust backend systems ensure data security, while real-time updates and responsive design guarantee a smooth experience across devices. Experience the synergy of cutting-edge technology and user-centric design.
 
-# Project Title
+🚀 Functionalities:
 
-**README File Description:**
+1.Health Information: Access a wealth of accurate and up-to-date medical information, covering a wide spectrum of conditions, treatments, and preventive measures.
 
-Welcome to Digi-Cure! This README file serves as your guide to understanding and navigating through this project. Here, you'll find essential information about the project's purpose, features, installation process, usage instructions, and more.
+2.Find a Doctor: Effortlessly locate and connect with specialized healthcare professionals based on your preferences and location.
 
-**Table of Contents:**
+3.Appointment Booking: Schedule medical appointments online, manage your appointments, and receive timely reminders.
 
-1. Introduction
-2. Features
-3. Installation
-4. Usage
-5. Configuration
-6. Contributing
-7. Troubleshooting
-8. License
+4.Feedback and Ratings: Provide and access patient reviews and ratings to make informed decisions about healthcare providers.
 
-**Introduction:**
-Get an overview of the project's goals, its significance, and what makes it unique. Discover how this project can benefit you and why it was created.
+5.Mobile Accessibility: Seamlessly access the website and its features through responsive design on various devices.
 
-**Features:**
-Explore the key features and functionalities that this project offers. Learn about the capabilities that set it apart and how they can address specific needs.
+🚀 Setup instructions
 
-**Installation:**
-Follow step-by-step instructions to set up the project on your local machine. Find out what tools and dependencies are required and how to ensure a smooth installation process.
+After Download or clone run, npm install OR yarn install to install all the dependencies.
 
-**Usage:**
-Learn how to use the project effectively. Find examples, code snippets, or explanations that demonstrate how to interact with the project and achieve desired outcomes.
+Rename .env.example into .env an put all credentials.
 
-**Configuration:**
-Understand how to configure and customize the project to suit your preferences. This section might cover settings, options, or variables that can be adjusted.
+Create a Cluster in MongoDB copy the connection string And put it into the ATLAS_URI in the .env File image
 
-**Contributing:**
-Discover how you can contribute to the project. Whether it's reporting issues, suggesting improvements, or submitting code changes, find guidelines for collaboration.
+Goto sendinblue website goto SMTP & API and Copy the SMTP Server,Port,Login,Master password and put it into the SMTP_HOST,SMTP_PORT,MAIL_USER,MAIL_PASSWORD accordingly in the .env File. image
 
-**Troubleshooting:**
-Encounter common issues and their solutions. Get assistance with problems you might encounter while using or developing for the project.
+🚀 Deployment
 
-**License:**
-Review the project's licensing information to understand how you can use, share, or modify the code. Make sure to comply with the specified terms.
+Create a new app Connect to the Github Select the Project Choose a branch to deploy and Deploy Branch it take 2-5 min.
 
-Thank you for choosing Digi-Cure! We hope you find this README file helpful as you embark on your journey with this project. If you have any questions or need further assistance, please don't hesitate to reach out to our support team or community. Happy exploring!
+After Deployment is done Goto Settings->Config Vars->Reveal Config Vars add .env Variable into the Config Vars
 
-<div align="center">
-  <img src="client/src/components/image/Home_page.png" alt="pic" align="center" style="width: 60%;" />
-</div>
+🚀 Requirements:
 
+Any Browser (Google Chrome,Microsoft Edge,Safari,Brave etc.)
 
-<br>
+VSCODE
+
+MongoDB Atlas
+
+POSTMAN
+
+live server Extension (only for Vs code)
+
+🚀 Medical Web Application
+
+🚀 Home Screen
 
 <div align="center">
-  <img src="client/src/components/image/Our_services.png" alt="pic" align="center" style="width: 60%;" />
+  <img src="client/src/components/image/Home_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
+🚀 Doctor's_List
 
+<div align="center">
+<img src="client/src/components/image/Doctor's_list.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 Doctor's_Details
+
+<div align="center">
+<img src="client/src/components/image/Doctor's_Details.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 Booking_page
+
+<div align="center">
+<img src="client/src/components/image/Booking_page.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 About_us
+
+<div align="center">
+<img src="client/src/components/image/About_us.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 Register_page
+
+<div align="center">
+<img src="client/src/components/image/Register_page.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 Myprofile_page
+
+<div align="center">
+<img src="client/src/components/image/Myprofile_page.png" alt="pic" align="center" style="width: 100%;" />
+</div>
+
+🚀 Demo of The FILE SHARE Application
+
+[![Digi-Cure Introduction Video](client/src/components/image/Home_page.png)](client/src/components/image/Demo.mp4)
+
+Thank you for your interest in Digi-Cure! For more information, explore our [website](https://www.digi-cure.com)
+
+
+
+
+🚀 DEVELOPER
+
+Ritam Majunder
+
+Soumojit Shome
+
+Bibhab Mukhopadhyay

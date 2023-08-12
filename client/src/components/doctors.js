@@ -5,11 +5,11 @@ import Modal from 'react-modal';
 import './doctors.css';
 
 const doctorsData = [
-  { id: 1, link: 'https://pages.razorpay.com/pl_MPESwmRcrBoxZZ/view', name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', },
-  { id: 2, name: 'Dr. Soumyakanti Dutta', specialization: 'Cardiologist', Experience: '15+ years', Location: 'Chandannagar Hospital', Fees: '1200' },
-  { id: 3, name: 'Dr. Sumanta Chatterjee', specialization: 'Dermatologist', Experience: '14+ years', Location: 'beleghata ID Hospital', Fees: '700' },
-  { id: 4, name: 'Dr. Soumyabrata acharya', specialization: 'Pediatrician', Experience: '10+ years', Location: 'SSKM Hospital', Fees: '800' },
-  { id: 5, name: 'Dr. Dipanwita Roy', specialization: 'Pediatrician', Experience: '5+ years', Location: 'KOLkata Medical College & Hospital', Fees: '1000' },
+  { id: 1, link: 'https://rzp.io/l/uJ9TXVb6B', name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', },
+  { id: 2, name: 'Dr. Soumyakanti Dutta',link:'https://rzp.io/l/dYstCjMGSv', specialization: 'Cardiologist', Experience: '15+ years', Location: 'Chandannagar Hospital', Fees: '1200' },
+  { id: 3, name: 'Dr. Sumanta Chatterjee',link:'https://rzp.io/l/TXif8Cu', specialization: 'Dermatologist', Experience: '14+ years', Location: 'beleghata ID Hospital', Fees: '700' },
+  { id: 4, name: 'Dr. Soumyabrata acharya', link:'https://rzp.io/l/QvNVernesv',specialization: 'Pediatrician', Experience: '10+ years', Location: 'SSKM Hospital', Fees: '800' },
+  { id: 5, name: 'Dr. Dipanwita Roy',link:'https://rzp.io/l/4eTnS6ls', specialization: 'Pediatrician', Experience: '5+ years', Location: 'KOLkata Medical College & Hospital', Fees: '1000' },
   // Add more doctor data here
 ];
 
@@ -89,7 +89,6 @@ const DoctorsList = () => {
             <div key={doctor.id} className="card">
               <div className="content">
                 <p className="heading">{doctor.name}</p>
-                
                 
                   <button className="btn" onClick={() => handleOpenModal(doctor)}>View Details</button>
           
