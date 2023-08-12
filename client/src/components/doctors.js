@@ -101,18 +101,7 @@ const DoctorsList = () => {
             <button className='doctors_btn'>Book Now</button>
           </Modal>
         )}
-        <div className="feedback-form">
-          <h2>Leave Feedback</h2>
-          <textarea
-            rows="4"
-            id='doctors_feedback_textarea'
-            placeholder="Enter your feedback here..."
-            value={feedback}
-            required
-            onChange={handleFeedbackChange}
-          />
-          <button className='doctors_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
-        </div>
+        
         <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
       </div>
       
