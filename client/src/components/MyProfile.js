@@ -4,39 +4,39 @@ import axios from 'axios';
 import './MyProfile.css';
 import Navbar from './Navbar'
 
-const MyProfile = () => {
+const MyProfile = async() => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
   const [uri, setUri] = useState('https://mgcfeni.edu.bd/midea/featuredimage/featuredimage2019-03-04-13-47-19_5c7d1e5732a77.jpg');
 
 
-  // try {
-  //     const token = localStorage.getItem('token');
-  //     const mail = localStorage.getItem('mail');
-  //     if(!token){
-  //       navigate('/login');
-  //     }
-  //     const response = await axios.get('http://localhost:3001/profile', {
-  //       params: {
-  //         mail:mail
-  //       }
-  //     });
+  try {
+    const token = localStorage.getItem('token');
+    const mail = localStorage.getItem('mail');
+    if (!token) {
+      navigate('/login');
+    }
+    const response = await axios.get('http://localhost:3001/profile', {
+      params: {
+        mail: mail
+      }
+    });
 
-  //     const data = response.data.user;
-  //     console.log(data);
-  //     setUserDetails(data);
-  //     setUri(data.avatar.secure_url);
+    const data = response.data.user;
+    console.log(data);
+    setUserDetails(data);
+    setUri(data.avatar.secure_url);
 
-  //   } catch (error) {
-  //     console.error(error);
-  //     navigate('/login'); // Navigate to login page
-  //   }
-  // };
+  } catch (error) {
+    console.error(error);
+    navigate('/login'); // Navigate to login page
+  }
+};
 
-  // useEffect(() => {
-  //   callProfile();
-  // }, []);const callProfile = async () => {
-  //   
+useEffect(() => {
+  callProfile();
+}, []); const callProfile = async () => {
+
 
   const logoutProfile = async (e) => {
     e.preventDefault();
