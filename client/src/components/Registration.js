@@ -24,19 +24,11 @@ function RegistrationForm({ type }) {
   
     try {
       const response = await axios.post('http://localhost:3001/register', formData);
-      setStatus(response.data.sucess);
-      console.log("1 status ",status);
-
-      console.log(response.data);
-      if (status) {
+      
         setName('');
         setEmail('');
         setPassword('');
         setImage('');
-        setRegistrationSuccessModalOpen(true);
-      } else {
-        setAlreadyRegisteredModalOpen(true);
-      }
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -86,28 +78,6 @@ function RegistrationForm({ type }) {
             </form>
           </div>
         </section>
-        <Modal
-          isOpen={registrationSuccessModalOpen}
-          onRequestClose={() => setRegistrationSuccessModalOpen(false)}
-          contentLabel="Registration Success"
-          className="modal"
-          overlayClassName="modal-overlay"
-        >
-          <h2>Registration Successful!</h2>
-          <p>Your registration has been successfully submitted.</p>
-          <button onClick={() => setRegistrationSuccessModalOpen(false)}>Close</button>
-        </Modal>
-        <Modal
-          isOpen={alreadyRegisteredModalOpen}
-          onRequestClose={() => setAlreadyRegisteredModalOpen(false)}
-          contentLabel="Already Registered"
-          className="modal"
-          overlayClassName="modal-overlay"
-        >
-          <h2>Already Registered</h2>
-          <p>You are already registered with this email address.</p>
-          <button onClick={() => setAlreadyRegisteredModalOpen(false)}>Close</button>
-        </Modal>
       </main>
     </>
   );
