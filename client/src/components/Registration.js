@@ -4,12 +4,15 @@ import Navbar from './Navbar';
 import './Registration.css';
 import log_reg_page_pic from "./image/log_reg_page_pic.jpg";
 import Modal from 'react-modal';
+import { useNavigate } from 'react-router-dom';
 
 function RegistrationForm({ type }) {
+  const navigate=useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [image, setImage] = useState('');
+  
   const [registrationSuccessModalOpen, setRegistrationSuccessModalOpen] = useState(false);
   const [alreadyRegisteredModalOpen, setAlreadyRegisteredModalOpen] = useState(false);
   const [status, setStatus] = useState(false);
@@ -29,6 +32,8 @@ function RegistrationForm({ type }) {
         setEmail('');
         setPassword('');
         setImage('');
+        window.alert('Registration Succesful !!');
+        navigate('/login');
     } catch (error) {
       console.error('Registration error:', error);
     }
