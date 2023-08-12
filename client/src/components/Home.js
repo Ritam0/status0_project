@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar'
 import Services from './Services'
 import Footer from './Footer'
@@ -8,8 +9,8 @@ import home_doctor_pic from "./image/home_doctor_pic.jpg"
 const Home = () => {
     return (
         <div>
-            {/* <Navbar /> */}
-           
+            <Navbar />
+
             <main id='home_main'>
 
                 <section id='left_sec'>
@@ -17,14 +18,15 @@ const Home = () => {
                         Healthy <span> Insights </span>
                     </section>
                     <section id='home_desc'>
-                    Empowering Health and Wellness: Your Trusted Source for Medical Insights and Care
+                        Empowering Health and Wellness: Your Trusted Source for Medical Insights and Care
                     </section>
                     <section id='home_left_btn'>
-                        <a href="#services_main">
-                            <button className="button">
-                                <span className="button-content" >Our Services</span>
-                            </button>
-                        </a>
+
+                        {/* <button className="button">
+                            <NavLink  to="/doctors">Our Doctors</NavLink>
+                        </button> */}
+                        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/doctors">Our Doctors</NavLink></button>
+
 
                     </section>
 
@@ -37,7 +39,7 @@ const Home = () => {
             </main>
 
 
-            <Services />
+            {/* <Services /> */}
             {/* <Footer /> */}
 
         </div>
