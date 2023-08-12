@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import './doctors.css';
 
 const doctorsData = [
-  { id: 1, name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', },
+  { id: 1, link: 'https://pages.razorpay.com/pl_MPESwmRcrBoxZZ/view', name: 'Dr. Parijat Debchoudhry', specialization: 'Cardiologist', Experience: '20+ years', Location: 'Mukundapur AMRI Hospital', Fees: '500', },
   { id: 2, name: 'Dr. Soumyakanti Dutta', specialization: 'Cardiologist', Experience: '15+ years', Location: 'Chandannagar Hospital', Fees: '1200' },
   { id: 3, name: 'Dr. Sumanta Chatterjee', specialization: 'Dermatologist', Experience: '14+ years', Location: 'beleghata ID Hospital', Fees: '700' },
   { id: 4, name: 'Dr. Soumyabrata acharya', specialization: 'Pediatrician', Experience: '10+ years', Location: 'SSKM Hospital', Fees: '800' },
@@ -112,7 +112,10 @@ const DoctorsList = () => {
             <p><b>Location:</b> {selectedDoctor.Location}</p>
             <p><b>Fees:</b> {selectedDoctor.Fees}</p>
             <button className='doctors_btn' onClick={handleCloseModal}>Close</button>
+            <a href={selectedDoctor.link} target='__blank'>
+
             <button className='doctors_btn'>Book Now</button>
+            </a>
           </Modal>
         )}
         <NavLink className="doctors_navlink" to="/Feedback">

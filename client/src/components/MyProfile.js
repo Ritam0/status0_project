@@ -91,7 +91,7 @@ const MyProfile = () => {
                 <p className="text">logout</p>
               </button>
               <button className="myproflie_button" onClick={ListService}>
-                <p className="text">List Your Service</p>
+                <p className="text">Register As Doctor</p>
               </button>
               <button className='myproflie_button'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
             </div>
