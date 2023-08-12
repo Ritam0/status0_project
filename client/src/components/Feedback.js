@@ -1,6 +1,6 @@
 import React , { useState } from 'react'
 import Navbar from './Navbar'
-import Services from './Services'
+// import Services from './Services'
 import Footer from './Footer'
 import { useNavigate } from 'react-router-dom'
 import './Feedback.css';

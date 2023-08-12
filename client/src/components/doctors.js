@@ -74,15 +74,29 @@ const DoctorsList = () => {
             {/* Add more specialization options here */}
           </select>
         </div>
-        <ul className="doctors-list">
+        {/* <ul className="doctors-list">
           {filteredDoctors.map((doctor) => (
             <li key={doctor.id} className="doctor-item">
               <h3>{doctor.name}</h3>
-              {/* ... (other details) */}
+              
               <button className='doctors_btn' onClick={() => handleOpenModal(doctor)}>View Details</button>
             </li>
           ))}
-        </ul>
+        </ul> */}
+        <section id='serv_cards'>
+          
+          {filteredDoctors.map((doctor) => (
+            <div key={doctor.id} className="card">
+              <div className="content">
+                <p className="heading">{doctor.name}</p>
+                
+                
+                  <button className="btn" onClick={() => handleOpenModal(doctor)}>View Details</button>
+          
+              </div>
+            </div>
+          ))}
+        </section>
         {selectedDoctor && (
           <Modal
             isOpen={true}
@@ -101,10 +115,11 @@ const DoctorsList = () => {
             <button className='doctors_btn'>Book Now</button>
           </Modal>
         )}
-        
-        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Give Feedback</NavLink></button>
+        <NavLink className="doctors_navlink" to="/Feedback">
+          <button className='doctors_btn'>Give Feedback</button>
+        </NavLink>
       </div>
-      
+
     </>
   );
 };
