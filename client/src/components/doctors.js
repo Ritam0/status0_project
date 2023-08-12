@@ -90,7 +90,6 @@ const DoctorsList = () => {
               <div className="content">
                 <p className="heading">{doctor.name}</p>
                 
-                
                   <button className="btn" onClick={() => handleOpenModal(doctor)}>View Details</button>
           
               </div>

@@ -210,40 +210,7 @@ textarea:focus {
 
 
 /* ============================================ */
-#services_main {
-  /* border: 3px solid blue; */
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px;
-  padding: 20px;
-  padding-top: 100px;
-}
 
-#serv_heading {
-  /* border: 3px solid red; */
-  height: fit-content;
-  padding: 5px;
-  text-align: center;
-  margin: 5px;
-  font-size: 40px;
-  font-weight: 700;
-}
-
-.serv_sub_heading {
-  /* border: 3px solid red; */
-  height: fit-content;
-  padding: 5px;
-  margin: 5px;
-  font-size: 40px;
-  font-weight: 700;
-  text-align: center;
-  color: orangered;
-
-
-}
 
 #serv_cards {
   /* border: 3px solid red; */
@@ -282,6 +249,7 @@ textarea:focus {
   align-items: flex-start;
   gap: 20px;
   color: #333333;
+  z-index: 2;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
@@ -316,7 +284,7 @@ textarea:focus {
   width: 5px;
   height: 100%;
   background: linear-gradient(-45deg, #ffc176 0%, #e281fa 100%);
-  z-index: -1;
+  /* z-index: -1; */
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
@@ -346,19 +314,7 @@ textarea:focus {
 
 
 @media only screen and (max-width: 800px) {
-  #services_main {
-    padding: 100px 10px;
 
-  }
-
-  #serv_heading {
-    font-size: 30px;
-  }
-
-  .serv_sub_heading {
-    font-size: 25px;
-
-  }
 
   .card {
     padding: 20px;
