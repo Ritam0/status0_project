@@ -5,10 +5,16 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [ulVisible, setUlVisible] = useState(true);
-
+  
+  const[isLogged,setIsLogged]=useState('Login');
+  // const token =localStorage.getItem('token');
+  // if(token){
+  //   setIsLogged('Profile');
+  // }
   const handleToggleClick = () => {
     setUlVisible(!ulVisible);
   };
+  
   
   return (
     <div className='nav-cont'>
@@ -39,9 +45,9 @@ const Navbar = () => {
           {/* <a className="nav-link" href="#services_main">Our Services</a> */}
           </li>
           <li><NavLink className="nav-link" to="/About">About Us</NavLink></li>
-          <li><NavLink className="nav-link" to="/profile">Profile</NavLink></li>
+          {/* <li></li> */}
           <li><NavLink className="nav-link" to="/Registration">Register</NavLink></li>
-          <li><NavLink className="nav-link" to="/login">Login</NavLink></li>
+          <li>{localStorage.getItem("token") != null ? <NavLink className="nav-link" to="/profile">Profile</NavLink> :<NavLink className="nav-link" to="/login">Login</NavLink> } </li>
         </ul>
 
 
