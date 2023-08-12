@@ -3,12 +3,14 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import './Registration.css';
 import log_reg_page_pic from "./image/log_reg_page_pic.jpg";
+import { useNavigate } from 'react-router-dom';
 
 function CustomerRegistration({ type }) {
+  const navigate=useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState('DOCTOR');
   const [serviceId_link, setServiceId_link] = useState('');
 
   const handleSubmit = async (event) => {
@@ -33,6 +35,7 @@ function CustomerRegistration({ type }) {
         setRole('');
         setServiceId_link('');
         window.alert('Thanks for Registration, after some verification you will be notified');
+        navigate('/profile')
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -62,7 +65,7 @@ function CustomerRegistration({ type }) {
                 <span className="reg_input-border reg_input-border-alt"></span>
               </div>
               <div className="form-control">
-                <input className="reg_input reg_input-alt" placeholder="role" type='role' value={role} onChange={(e) => setRole(e.target.value)} required />
+                <input className="reg_input reg_input-alt" placeholder="role" type='role' value={role} onChange={(e) => setRole(e.target.value)}  readOnly />
                 <span className="reg_input-border reg_input-border-alt"></span>
               </div>
               <div className="form-control">
