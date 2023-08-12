@@ -56,7 +56,7 @@ const MyProfile = () => {
     }
   }
   const ListService = () => {
-    navigate("/customer");
+    navigate("/list-service");
   }
 
   return (
