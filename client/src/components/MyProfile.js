@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './MyProfile.css';
 import Navbar from './Navbar'
+import { NavLink } from 'react-router-dom';
 
 const MyProfile = () => {
   const navigate = useNavigate();
@@ -96,6 +97,7 @@ const MyProfile = () => {
           </div>
         </div>
       </div>
+      <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
     </>
   );
 };

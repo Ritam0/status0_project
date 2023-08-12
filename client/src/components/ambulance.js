@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar'
 import './ambulance.css';
 
@@ -59,6 +60,7 @@ const AmbulanceServicesList = () => {
           </li>
         ))}
       </ul>
+      <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
     </div>
     </>
   );

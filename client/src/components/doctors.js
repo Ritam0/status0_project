@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Modal from 'react-modal';
 import './doctors.css';
 
@@ -112,6 +113,7 @@ const DoctorsList = () => {
           />
           <button className='doctors_btn' onClick={() => setFeedback('')}>Submit Feedback</button>
         </div>
+        <button className='doctors_btn'><NavLink className="doctors_navlink" to="/Feedback">Feedback</NavLink></button>
       </div>
       
     </>
