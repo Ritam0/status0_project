@@ -6,7 +6,7 @@ import axios from 'axios';
 const MyProfile = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
-  const [uri, setUri] = useState(' const [userDetails, setUserDetails] = useState({});');
+  const [uri, setUri] = useState('https://mgcfeni.edu.bd/midea/featuredimage/featuredimage2019-03-04-13-47-19_5c7d1e5732a77.jpg');
   
 
   const callProfile = async () => {
