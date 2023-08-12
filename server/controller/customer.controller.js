@@ -16,7 +16,7 @@ const customer_register=async (req,res,next)=>{
             name,
             email,
             number,
-            role,
+            role, 
             serviceId_link
         });
         if(!customer){
