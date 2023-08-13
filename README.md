@@ -106,6 +106,3 @@ Thank you for your interest in Digi-Cure! For more information, explore our [web
 **Soumojit Shome**
 
 **Bibhab Mukhopadhyay**
-
-
-[def]: https://client/src/components/image/demo.gif
