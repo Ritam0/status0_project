@@ -319,6 +319,7 @@ textarea:focus {
   .card {
     padding: 20px;
     width: 88vw;
+    justify-content: left;
     /* height: 300px; */
 
   }
