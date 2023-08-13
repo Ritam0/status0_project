@@ -38,6 +38,7 @@ function LoginForm () {
       window.alert('Login successful');
       navigate("/profile");
     } catch (error) {
+      window.alert('Please Enter Details Succesfully')
       console.error('Login error:', error);
     }
   };

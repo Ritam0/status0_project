@@ -35,6 +35,7 @@ function RegistrationForm({ type }) {
         window.alert('Registration Succesful !!');
         navigate('/login');
     } catch (error) {
+      window.alert('registration failed!! try again')
       console.error('Registration error:', error);
     }
   };
