@@ -229,7 +229,8 @@ textarea:focus {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: left;
   width: 320px;
   /* height: 350px; */
   height: fit-content;
