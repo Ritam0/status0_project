@@ -86,7 +86,7 @@ After Deployment is done Goto Settings->Config Vars->Reveal Config Vars add .env
 <img src="client/src/components/image/Myprofile_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 **Demo of The FILE SHARE Application**
+🚀 **Demo of The Medical Web Application**
 
 Check out this awesome animated GIF showcasing our project:
 
