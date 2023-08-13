@@ -1,20 +1,20 @@
-We Developed a Medical web Application using Node Js,Express JS, Mongo DB Backend And in Frontend we used React Js. We also used postman API in this Application.Our website was meticulously developed by a dedicated team of designers and programmers. From concept to code, we fused creativity and technology to bring you an intuitive and visually captivating platform. Seamlessly integrating design and functionality, we've created an engaging digital experience tailored to your needs.
+We Developed a **Medical web Application** using **Node Js,Express JS, Mongo DB** Backend And in Frontend we used **React Js**. We also used **postman API** in this Application.Our website was meticulously developed by a dedicated team of designers and programmers. From concept to code, we fused creativity and technology to bring you an **intuitive and visually captivating platform**. Seamlessly integrating design and functionality, we've created an **engaging digital experience** tailored to your needs.
 How did it work?
-Medical web Application has a full Stack Project.Our platform operates through a user-friendly interface, offering intuitive navigation and interactive elements. Users can effortlessly explore informative sections, access comprehensive medical insights, and seamlessly connect with healthcare professionals. Behind the scenes, robust backend systems ensure data security, while real-time updates and responsive design guarantee a smooth experience across devices. Experience the synergy of cutting-edge technology and user-centric design.
+Medical web Application has a full Stack Project.Our platform operates through a user-friendly interface, **offering intuitive navigation and interactive elements**. Users can effortlessly explore informative sections, access comprehensive medical insights, and seamlessly connect with healthcare professionals. Behind the scenes, robust backend systems ensure data security, while real-time updates and responsive design guarantee a smooth experience across devices. Experience the synergy of cutting-edge technology and user-centric design.
 
-🚀 Functionalities:
+🚀 **Functionalities:**
 
-1.Health Information: Access a wealth of accurate and up-to-date medical information, covering a wide spectrum of conditions, treatments, and preventive measures.
+1.**Health Information**: Access a wealth of accurate and up-to-date medical information, covering a wide spectrum of conditions, treatments, and preventive measures.
 
-2.Find a Doctor: Effortlessly locate and connect with specialized healthcare professionals based on your preferences and location.
+2.**Find a Doctor**: Effortlessly locate and connect with specialized healthcare professionals based on your preferences and location.
 
-3.Appointment Booking: Schedule medical appointments online, manage your appointments, and receive timely reminders.
+3.**Appointment Booking**: Schedule medical appointments online, manage your appointments, and receive timely reminders.
 
-4.Feedback and Ratings: Provide and access patient reviews and ratings to make informed decisions about healthcare providers.
+4.**Feedback and Ratings**: Provide and access patient reviews and ratings to make informed decisions about healthcare providers.
 
-5.Mobile Accessibility: Seamlessly access the website and its features through responsive design on various devices.
+5.**Mobile Accessibility**: Seamlessly access the website and its features through responsive design on various devices.
 
-🚀 Setup instructions
+🚀**Setup instructions**
 
 After Download or clone run, npm install OR yarn install to install all the dependencies.
 
@@ -24,81 +24,88 @@ Create a Cluster in MongoDB copy the connection string And put it into the ATLAS
 
 Goto sendinblue website goto SMTP & API and Copy the SMTP Server,Port,Login,Master password and put it into the SMTP_HOST,SMTP_PORT,MAIL_USER,MAIL_PASSWORD accordingly in the .env File. image
 
-🚀 Deployment
+🚀 **Deployment**
 
 Create a new app Connect to the Github Select the Project Choose a branch to deploy and Deploy Branch it take 2-5 min.
 
 After Deployment is done Goto Settings->Config Vars->Reveal Config Vars add .env Variable into the Config Vars
 
-🚀 Requirements:
+🚀**Requirements:**
 
-Any Browser (Google Chrome,Microsoft Edge,Safari,Brave etc.)
+**Any Browser (Google Chrome,Microsoft Edge,Safari,Brave etc.)**
 
-VSCODE
+**VSCODE**
 
-MongoDB Atlas
+**MongoDB Atlas**
 
-POSTMAN
+**POSTMAN**
 
-live server Extension (only for Vs code)
+**live server Extension (only for Vs code)**
 
 🚀 Medical Web Application
 
-🚀 Home Screen
+🚀 **Home Screen**
 
 <div align="center">
   <img src="client/src/components/image/Home_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Doctor's_List
+🚀 **Doctor's_List**
 
 <div align="center">
 <img src="client/src/components/image/Doctor's_list.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Doctor's_Details
+🚀 **Doctor's_Details**
 
 <div align="center">
 <img src="client/src/components/image/Doctor's_Details.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Booking_page
+🚀 **Booking_page**
 
 <div align="center">
 <img src="client/src/components/image/Booking_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 About_us
+🚀 **About_us**
 
 <div align="center">
 <img src="client/src/components/image/About_us.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Register_page
+🚀**Register_page**
 
 <div align="center">
 <img src="client/src/components/image/Register_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Myprofile_page
+🚀 **Myprofile_page**
 
 <div align="center">
 <img src="client/src/components/image/Myprofile_page.png" alt="pic" align="center" style="width: 100%;" />
 </div>
 
-🚀 Demo of The FILE SHARE Application
+🚀 **Demo of The FILE SHARE Application**
 
-[![Digi-Cure Introduction Video](client/src/components/image/Home_page.png)](client/src/components/image/Demo.mp4)
+Check out this awesome animated GIF showcasing our project:
 
-Thank you for your interest in Digi-Cure! For more information, explore our [website](https://www.digi-cure.com)
+![Demo](client\src\components\image\demo.gif)
+
+
+
+Thank you for your interest in Digi-Cure! For more information, explore our [website](https://digicure.vercel.app)
 
 
 
 
 🚀 DEVELOPER
 
-Ritam Majunder
+**Ritam Majunder**
 
-Soumojit Shome
+**Soumojit Shome**
 
-Bibhab Mukhopadhyay
+**Bibhab Mukhopadhyay**
+
+
+[def]: https://client/src/components/image/demo.gif
