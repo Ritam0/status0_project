@@ -26,7 +26,7 @@ function RegistrationForm({ type }) {
     formData.append('avatar', image);
   
     try {
-      const response = await axios.post('http://localhost:3001/register', formData);
+      const response = await axios.post('https://digi-cure-server.onrender.com/register', formData);
       
         setName('');
         setEmail('');

@@ -18,7 +18,7 @@ const MyProfile = () => {
       if (!token) {
         navigate('/login');
       }
-      const response = await axios.get('http://localhost:3001/profile', {
+      const response = await axios.get('https://digi-cure-server.onrender.com/profile', {
         params: {
           mail: mail
         }

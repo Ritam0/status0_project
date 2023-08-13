@@ -24,7 +24,7 @@ function LoginForm () {
       };
 
     try {
-      const response = await axios.post('http://localhost:3001/login', data);
+      const response = await axios.post('https://digi-cure-server.onrender.com/login', data);
       console.log('Login successful:', response.data);
       document.cookie = `token=${response.data.token}; path=/;`;
       localStorage.setItem('token',response.data.token);

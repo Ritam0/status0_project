@@ -27,7 +27,7 @@ function CustomerRegistration({ type }) {
 
   
     try {
-      const response = await axios.post('http://localhost:3001/customer/registration',customerData );
+      const response = await axios.post('https://digi-cure-server.onrender.com/registration',customerData );
       
         setName('');
         setEmail('');

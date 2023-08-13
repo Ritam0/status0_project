@@ -21,7 +21,7 @@ const Feedback = () => {
             reveiw: reveiw
           };
         try {
-            const response = await axios.post('http://localhost:3001/feedback', data);
+            const response = await axios.post('https://digi-cure-server.onrender.com/feedback', data);
               setName('');
               setReveiw('');
               console.log(response.message)
