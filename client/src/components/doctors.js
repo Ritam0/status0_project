@@ -128,6 +128,8 @@ const DoctorsList = () => {
             <p><b>Experience:</b> {selectedDoctor.Experience}</p>
             <p><b>Location:</b> {selectedDoctor.Location}</p>
             <p><b>Fees:</b> {selectedDoctor.Fees}</p>
+            <p><b>availableDays:</b> {selectedDoctor.availableDays}</p>
+            <p><b>availableHours:</b> {selectedDoctor.availableHours}</p>
             <button className='doctors_btn' onClick={handleCloseModal}>Close</button>
             <a href={selectedDoctor.link} target='__blank'>
 
